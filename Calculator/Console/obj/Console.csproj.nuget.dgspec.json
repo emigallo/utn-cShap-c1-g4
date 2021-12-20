@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jualotit\\Desktop\\UTN\\Clase 4\\Calculator\\Console\\Console.csproj": {}
+    "C:\\Users\\rmartpri\\Desktop\\utn-cShap-c1-g4\\Calculator\\Console\\Console.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jualotit\\Desktop\\UTN\\Clase 4\\Calculator\\Business\\Business.csproj": {
+    "C:\\Users\\rmartpri\\Desktop\\utn-cShap-c1-g4\\Calculator\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jualotit\\Desktop\\UTN\\Clase 4\\Calculator\\Business\\Business.csproj",
+        "projectUniqueName": "C:\\Users\\rmartpri\\Desktop\\utn-cShap-c1-g4\\Calculator\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "C:\\Users\\jualotit\\Desktop\\UTN\\Clase 4\\Calculator\\Business\\Business.csproj",
-        "packagesPath": "C:\\Users\\jualotit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jualotit\\Desktop\\UTN\\Clase 4\\Calculator\\Business\\obj\\",
+        "projectPath": "C:\\Users\\rmartpri\\Desktop\\utn-cShap-c1-g4\\Calculator\\Business\\Business.csproj",
+        "packagesPath": "C:\\Users\\rmartpri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rmartpri\\Desktop\\utn-cShap-c1-g4\\Calculator\\Business\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\jualotit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rmartpri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,17 +62,21 @@
         }
       }
     },
-    "C:\\Users\\jualotit\\Desktop\\UTN\\Clase 4\\Calculator\\Console\\Console.csproj": {
+    "C:\\Users\\rmartpri\\Desktop\\utn-cShap-c1-g4\\Calculator\\Console\\Console.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jualotit\\Desktop\\UTN\\Clase 4\\Calculator\\Console\\Console.csproj",
+        "projectUniqueName": "C:\\Users\\rmartpri\\Desktop\\utn-cShap-c1-g4\\Calculator\\Console\\Console.csproj",
         "projectName": "Console",
-        "projectPath": "C:\\Users\\jualotit\\Desktop\\UTN\\Clase 4\\Calculator\\Console\\Console.csproj",
-        "packagesPath": "C:\\Users\\jualotit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jualotit\\Desktop\\UTN\\Clase 4\\Calculator\\Console\\obj\\",
+        "projectPath": "C:\\Users\\rmartpri\\Desktop\\utn-cShap-c1-g4\\Calculator\\Console\\Console.csproj",
+        "packagesPath": "C:\\Users\\rmartpri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rmartpri\\Desktop\\utn-cShap-c1-g4\\Calculator\\Console\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\jualotit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rmartpri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,8 +90,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\jualotit\\Desktop\\UTN\\Clase 4\\Calculator\\Business\\Business.csproj": {
-                "projectPath": "C:\\Users\\jualotit\\Desktop\\UTN\\Clase 4\\Calculator\\Business\\Business.csproj"
+              "C:\\Users\\rmartpri\\Desktop\\utn-cShap-c1-g4\\Calculator\\Business\\Business.csproj": {
+                "projectPath": "C:\\Users\\rmartpri\\Desktop\\utn-cShap-c1-g4\\Calculator\\Business\\Business.csproj"
               }
             }
           }
