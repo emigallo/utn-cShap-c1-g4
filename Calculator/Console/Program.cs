@@ -1,18 +1,41 @@
 ﻿using Business.Models;
-using Business.Models.Operations;
-using System;
+using Business.Operations;
+using Business.Utils;
 
-
+namespace Console
+{
     class Program
     {
-        public static void Main (string [] args)
+        static void Main(string[] args)
         {
+            CalculatorWithHistory calc = new CalculatorWithHistory();
+          
 
-            Calculator calc = new Calculator();
+            calc.Add(4);
+            OperationBase add = new AddOperation(3.3);
+            calc.Add(add);
+            System.Console.WriteLine(add.GetInput());
 
-            Console.WriteLine(calc.Do(1, 1, new AddOperation()));
-            Console.WriteLine(calc.Do(1, 1, new DivideOperation()));
-            Console.WriteLine(calc.Do(1, 1, new MultiplyOperation()));
-            Console.WriteLine(calc.Do(1, 1, new SubstractOperation()));
+            OperationBase mult = new MultiplyOperation(2.4);
+            calc.Add(mult);
+            System.Console.WriteLine(mult.GetInput());
+
+            double result = calc.Do();
+            System.Console.WriteLine(result);
+
+            calc.Copy();
+
+            System.Console.WriteLine("Contains " + calc.ContainsOperation(new AddOperation(3.3)));
+        }
+
+        //private static double CalculateResultAndShowInConsole(double val1, double val2, OperationBase op)
+        //{
+        //    //Calculator calc = new Calculator();
+
+        //    //double result = calc.CalculateResult(val1, val2, op);
+        //    //System.Console.WriteLine(result);
+
+        //    //return result;
+        //}
     }
-    }
+}
