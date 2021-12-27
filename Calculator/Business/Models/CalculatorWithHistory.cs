@@ -61,7 +61,17 @@ namespace Business.Models
         /// <returns></returns>
         public string GetOnlyAddOperationInputs()
         {
-            return string.Empty;
+            string result = this.Input.Value.ToString();
+
+            foreach (OperationBase op in this.Input.GetOperations())
+            {
+                if (op.Symbol == "+") { 
+                    result = result + op.GetInput(); 
+                }
+                
+            }
+
+            return result;
         }
 
         /// <summary>

@@ -28,6 +28,7 @@ namespace Console
             System.Console.WriteLine("Contains " + calc.ContainsOperation(new AddOperation(3.3)));
 
             System.Console.WriteLine(calc.GetInputs());
+            System.Console.WriteLine(calc.GetOnlyAddOperationInputs());
         }
 
         //private static double CalculateResultAndShowInConsole(double val1, double val2, OperationBase op)
