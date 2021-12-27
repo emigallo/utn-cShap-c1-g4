@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GUI"
         mc:Ignorable="d"
         Title="Calculator" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#3a3b3b">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
