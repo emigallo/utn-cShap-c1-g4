@@ -8,13 +8,13 @@ namespace Business.Models
     {
         public ValueInput(double value)
         {
-            this.Value = value;
-            this.Operations = new List<OperationBase>();
+            this.Value = value; //valor inicial
+            this.Operations = new List<OperationBase>(); //lo istanciamos como 0 valor
         }
 
         public double Value { get; init; }
 
-        private List<OperationBase> Operations { get; init; }
+        private List<OperationBase> Operations { get; init; } //init: para que solo pueda ser asignado un valor en la construccion del objeto
 
         public void AddOperation(OperationBase op)
         {
@@ -39,7 +39,3 @@ namespace Business.Models
 // /2
 // *3
 
-// 4
-// 4+4
-// 8/2
-// 4*3

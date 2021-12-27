@@ -54,11 +54,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rmartpri\\Desktop\\utn-cShap-c1-g4\\Calculator\\Business\\Business.csproj",
+      "projectUniqueName": "C:\\Users\\rmartpri\\Desktop\\utn-cSharp\\Clase5\\Calculator\\Business\\Business.csproj",
       "projectName": "Business",
-      "projectPath": "C:\\Users\\rmartpri\\Desktop\\utn-cShap-c1-g4\\Calculator\\Business\\Business.csproj",
+      "projectPath": "C:\\Users\\rmartpri\\Desktop\\utn-cSharp\\Clase5\\Calculator\\Business\\Business.csproj",
       "packagesPath": "C:\\Users\\rmartpri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rmartpri\\Desktop\\utn-cShap-c1-g4\\Calculator\\Business\\obj\\",
+      "outputPath": "C:\\Users\\rmartpri\\Desktop\\utn-cSharp\\Clase5\\Calculator\\Business\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

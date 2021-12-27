@@ -2,15 +2,14 @@
 {
     public class AddOperation : OperationBase
     {
-        public AddOperation(double value) : base("+", value)
+        public AddOperation(double value) : base("+", value) //le pasamos al contructor
         {
 
         }
 
         public override double CalculateResult(double input1)
         {
-            string input = base.GetInput();
-            return input1 + base.Value;
+            return input1 + base.Value; //con el base estamos accediendo al value del padre
         }
 
         public override string GetInput()
