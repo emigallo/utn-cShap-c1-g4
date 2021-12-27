@@ -26,6 +26,8 @@ namespace Console
             calc.Copy();
 
             System.Console.WriteLine("Contains " + calc.ContainsOperation(new AddOperation(3.3)));
+
+            System.Console.WriteLine(calc.GetInputs());
         }
 
         //private static double CalculateResultAndShowInConsole(double val1, double val2, OperationBase op)

@@ -45,7 +45,14 @@ namespace Business.Models
         /// <returns></returns>
         public string GetInputs()
         {
-            return string.Empty;
+            string result = this.Input.Value.ToString(); 
+
+            foreach (OperationBase op in this.Input.GetOperations())
+            {
+                result = result + op.GetInput();
+            }
+
+            return result;
         }
 
         /// <summary>

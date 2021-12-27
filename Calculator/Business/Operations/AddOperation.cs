@@ -14,7 +14,7 @@
 
         public override string GetInput()
         {
-            return base.Value.ToString("F2");
+            return this.Symbol.ToString() + base.Value.ToString("F2");
         }
     }
 }

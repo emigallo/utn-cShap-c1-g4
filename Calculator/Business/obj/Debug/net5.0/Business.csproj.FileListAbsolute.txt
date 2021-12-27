@@ -22,3 +22,15 @@
 /Users/emilianogallo/Stuffs/git/UTN/cSharp/Clase5/Calculator/Business/obj/Debug/net5.0/Business.dll
 /Users/emilianogallo/Stuffs/git/UTN/cSharp/Clase5/Calculator/Business/obj/Debug/net5.0/ref/Business.dll
 /Users/emilianogallo/Stuffs/git/UTN/cSharp/Clase5/Calculator/Business/obj/Debug/net5.0/Business.pdb
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\Calculator\Business\bin\Debug\net5.0\Business.deps.json
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\Calculator\Business\bin\Debug\net5.0\Business.dll
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\Calculator\Business\bin\Debug\net5.0\ref\Business.dll
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\Calculator\Business\bin\Debug\net5.0\Business.pdb
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\Calculator\Business\obj\Debug\net5.0\Business.csproj.AssemblyReference.cache
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\Calculator\Business\obj\Debug\net5.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\Calculator\Business\obj\Debug\net5.0\Business.AssemblyInfoInputs.cache
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\Calculator\Business\obj\Debug\net5.0\Business.AssemblyInfo.cs
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\Calculator\Business\obj\Debug\net5.0\Business.csproj.CoreCompileInputs.cache
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\Calculator\Business\obj\Debug\net5.0\Business.dll
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\Calculator\Business\obj\Debug\net5.0\ref\Business.dll
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\Calculator\Business\obj\Debug\net5.0\Business.pdb

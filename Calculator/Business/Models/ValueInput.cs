@@ -9,7 +9,7 @@ namespace Business.Models
         public ValueInput(double value)
         {
             this.Value = value; //valor inicial
-            this.Operations = new List<OperationBase>(); //lo istanciamos como 0 valor
+            this.Operations = new List<OperationBase>(); //lo instanciamos como 0 valor
         }
 
         public double Value { get; init; }

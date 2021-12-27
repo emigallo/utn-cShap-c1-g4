@@ -27,7 +27,7 @@
 
         public virtual string GetInput()
         {
-            return this.Value.ToString();
+            return this.Symbol.ToString() + this.Value.ToString();
         }
     }
 }
