@@ -14,21 +14,21 @@ namespace Console
             calc.Add(4);
             OperationBase add = new AddOperation(3.3);
             calc.Add(add);
-            System.Console.WriteLine(add.GetInput());
 
             OperationBase mult = new MultiplyOperation(2.4);
             calc.Add(mult);
-            System.Console.WriteLine(mult.GetInput());
+
+            System.Console.WriteLine("La entrada fue: " + calc.GetInputs());
 
             double result = calc.Do();
-            System.Console.WriteLine(result);
+            System.Console.WriteLine("El rdo es: " + result);
 
             calc.Copy();
 
-            System.Console.WriteLine("Contains " + calc.ContainsOperation(new AddOperation(3.3)));
+            System.Console.WriteLine("Contains " + calc.ContainsOperation(new MultiplyOperation(2.4)));
 
-            System.Console.WriteLine(calc.GetInputs());
-            System.Console.WriteLine(calc.GetOnlyAddOperationInputs());
+            
+            System.Console.WriteLine("Las operaciones de suma fueron: " + calc.GetOnlyAddOperationInputs());
         }
 
         //private static double CalculateResultAndShowInConsole(double val1, double val2, OperationBase op)

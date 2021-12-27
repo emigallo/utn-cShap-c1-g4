@@ -81,7 +81,8 @@ namespace Business.Models
         /// <returns></returns>
         public Boolean ContainsOperation(OperationBase operation)
         {
-            return true;
+            List<OperationBase> operations = this.Input.GetOperations();
+            return operations.Contains(operation);
         }
     }
 }
