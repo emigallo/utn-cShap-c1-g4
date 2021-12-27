@@ -23,74 +23,74 @@
         </Grid.ColumnDefinitions>
 
         <!--Fila 1-->
-        <StackPanel Grid.Row="0" Grid.Column="0" Background="DarkGray" Grid.ColumnSpan="4">
+        <StackPanel Grid.Row="0" Grid.Column="0" Background="#3a3b3b" Grid.ColumnSpan="4">
             <Label>Display</Label>
         </StackPanel>
 
         <!--Fila 2-->
-        <StackPanel Grid.Row="1" Grid.Column="0">
+        <StackPanel Grid.Row="1" Grid.Column="0" Background="#4c4c4c">
             <Label>AC</Label>
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="1">
+        <StackPanel Grid.Row="1" Grid.Column="1" Background="#4c4c4c">
             <Label>+/-</Label>
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="2">
+        <StackPanel Grid.Row="1" Grid.Column="2" Background="#4c4c4c">
             <Label>%</Label>
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="3">
+        <StackPanel Grid.Row="1" Grid.Column="3" Background="#Fc8e0e">
             <Label>÷</Label>
         </StackPanel>
 
         <!--Fila 3-->
-        <StackPanel Grid.Row="2" Grid.Column="0">
+        <StackPanel Grid.Row="2" Grid.Column="0" Background="#656565">
             <Label>7</Label>
         </StackPanel>
-        <StackPanel Grid.Row="2" Grid.Column="1">
+        <StackPanel Grid.Row="2" Grid.Column="1" Background="#656565">
             <Label>8</Label>
         </StackPanel>
-        <StackPanel Grid.Row="2" Grid.Column="2">
+        <StackPanel Grid.Row="2" Grid.Column="2" Background="#656565">
             <Label>9</Label>
         </StackPanel>
-        <StackPanel Grid.Row="2" Grid.Column="3">
+        <StackPanel Grid.Row="2" Grid.Column="3" Background="#Fc8e0e">
             <Label>X</Label>
         </StackPanel>
 
         <!--Fila 3-->
-        <StackPanel Grid.Row="3" Grid.Column="0">
+        <StackPanel Grid.Row="3" Grid.Column="0" Background="#656565">
             <Label>4</Label>
         </StackPanel>
-        <StackPanel Grid.Row="3" Grid.Column="1">
+        <StackPanel Grid.Row="3" Grid.Column="1" Background="#656565">
             <Label>5</Label>
         </StackPanel>
-        <StackPanel Grid.Row="3" Grid.Column="2">
+        <StackPanel Grid.Row="3" Grid.Column="2" Background="#656565">
             <Label>6</Label>
         </StackPanel>
-        <StackPanel Grid.Row="3" Grid.Column="3">
+        <StackPanel Grid.Row="3" Grid.Column="3" Background="#Fc8e0e">
             <Label>-</Label>
         </StackPanel>
 
         <!--Fila 3-->
-        <StackPanel Grid.Row="4" Grid.Column="0">
+        <StackPanel Grid.Row="4" Grid.Column="0" Background="#656565">
             <Label>1</Label>
         </StackPanel>
-        <StackPanel Grid.Row="4" Grid.Column="1">
+        <StackPanel Grid.Row="4" Grid.Column="1" Background="#656565">
             <Label>2</Label>
         </StackPanel>
-        <StackPanel Grid.Row="4" Grid.Column="2">
+        <StackPanel Grid.Row="4" Grid.Column="2" Background="#656565">
             <Label>3</Label>
         </StackPanel>
-        <StackPanel Grid.Row="4" Grid.Column="3">
+        <StackPanel Grid.Row="4" Grid.Column="3" Background="#Fc8e0e">
             <Label>+</Label>
         </StackPanel>
 
         <!--Fila 3-->
-        <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Background="Red">
+        <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Background="#656565">
             <Label>0</Label>
         </StackPanel>
-        <StackPanel Grid.Row="5" Grid.Column="2">
+        <StackPanel Grid.Row="5" Grid.Column="2" Background="#656565">
             <Label>,</Label>
         </StackPanel>
-        <StackPanel Grid.Row="5" Grid.Column="3">
+        <StackPanel Grid.Row="5" Grid.Column="3" Background="#Fc8e0e">
             <Label>=</Label>
         </StackPanel>
         
