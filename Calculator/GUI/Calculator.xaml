@@ -24,7 +24,7 @@
 
         <!--Fila 1-->
         <StackPanel Grid.Row="0" Grid.Column="0" Background="#3a3b3b" Grid.ColumnSpan="4">
-            <Label HorizontalContentAlignment="Right" Foreground="#e6e6e6" FontSize="55" RenderTransformOrigin="0.5,0.979" Height="71" Content="0"/>
+            <Label HorizontalContentAlignment="Right" Foreground="#e6e6e6" FontSize="53" RenderTransformOrigin="0.5,0.979" Height="71" Content="0"/>
         </StackPanel>
 
         <!--Fila 2-->
