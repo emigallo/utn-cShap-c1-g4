@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI"
         mc:Ignorable="d"
-        Title="Calculator" Height="450" Width="800">
+        Title="Calculator" Height="400" Width="300">
     <Grid Background="#3a3b3b">
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -24,7 +24,7 @@
 
         <!--Fila 1-->
         <StackPanel Grid.Row="0" Grid.Column="0" Background="#3a3b3b" Grid.ColumnSpan="4">
-            <Label HorizontalContentAlignment="Right" Foreground="#e6e6e6" FontSize="53" RenderTransformOrigin="0.5,0.979" Height="71" Content="0"/>
+            <Label HorizontalContentAlignment="Right" Foreground="#e6e6e6" FontSize="45" RenderTransformOrigin="0.5,0.979" Height="71" Content="0"/>
         </StackPanel>
 
         <!--Fila 2-->
