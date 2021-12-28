@@ -25,7 +25,7 @@ namespace Console
 
             calc.Copy();
 
-            System.Console.WriteLine("Contains " + calc.ContainsOperation(new MultiplyOperation(2.4)));
+            System.Console.WriteLine("Contains " + calc.ContainsOperation(mult));
 
             
             System.Console.WriteLine("Las operaciones de suma fueron: " + calc.GetOnlyAddOperationInputs());
