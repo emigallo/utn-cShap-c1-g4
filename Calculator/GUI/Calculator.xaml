@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI"
         mc:Ignorable="d"
-        Title="Calculator" Height="400" Width="300">
+        Title="Calculator" Height="500" Width="300">
+    <Viewbox Stretch="Fill">
     <Grid Background="#3a3b3b">
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -30,72 +31,73 @@
         <!--Fila 2-->
 
         <StackPanel Grid.Row="1" Grid.Column="0" Background="#4c4c4c">
-            <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="25" RenderTransformOrigin="0.5,0.979" Height="71" VerticalContentAlignment="Center">AC</Label>
+                <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="20" RenderTransformOrigin="0.5,0.979" Height="71" Width="71" VerticalContentAlignment="Center">AC</Label>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1" Background="#4c4c4c">
-            <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="25" RenderTransformOrigin="0.5,0.979" Height="71" VerticalContentAlignment="Center">+/-</Label>
+                <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="20" RenderTransformOrigin="0.5,0.979" Height="71" Width="71" VerticalContentAlignment="Center">+/-</Label>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="2" Background="#4c4c4c">
-            <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="25" RenderTransformOrigin="0.5,0.979" Height="71" VerticalContentAlignment="Center">%</Label>
+                <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="20" RenderTransformOrigin="0.5,0.979" Height="71" Width="71" VerticalContentAlignment="Center">%</Label>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="3" Background="#Fc8e0e">
-            <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="25" RenderTransformOrigin="0.5,0.979" Height="71" VerticalContentAlignment="Center">÷</Label>
+                <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="20" RenderTransformOrigin="0.5,0.979" Height="71" Width="71" VerticalContentAlignment="Center">÷</Label>
         </StackPanel>
 
         <!--Fila 3-->
         
         <StackPanel Grid.Row="2" Grid.Column="0" Background="#656565">
-            <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="25" RenderTransformOrigin="0.5,0.979" Height="71" VerticalContentAlignment="Center">7</Label>
+                <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="20" RenderTransformOrigin="0.5,0.979" Height="71" Width="71" VerticalContentAlignment="Center">7</Label>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="1" Background="#656565">
-            <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="25" RenderTransformOrigin="0.5,0.979" Height="71" VerticalContentAlignment="Center">8</Label>
+                <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="20" RenderTransformOrigin="0.5,0.979" Height="71" Width="71" VerticalContentAlignment="Center">8</Label>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="2" Background="#656565">
-            <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="25" RenderTransformOrigin="0.5,0.979" Height="71" VerticalContentAlignment="Center">9</Label>
+                <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="20" RenderTransformOrigin="0.5,0.979" Height="71" Width="71" VerticalContentAlignment="Center">9</Label>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="3" Background="#Fc8e0e">
-            <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="25" RenderTransformOrigin="0.5,0.979" Height="71" VerticalContentAlignment="Center">X</Label>
+                <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="20" RenderTransformOrigin="0.5,0.979" Height="71" Width="71" VerticalContentAlignment="Center">X</Label>
         </StackPanel>
 
         <!--Fila 3-->
         <StackPanel Grid.Row="3" Grid.Column="0" Background="#656565">
-            <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="25" RenderTransformOrigin="0.5,0.979" Height="71" VerticalContentAlignment="Center">4</Label>
+                <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="20" RenderTransformOrigin="0.5,0.979" Height="71" Width="71" VerticalContentAlignment="Center">4</Label>
         </StackPanel>
         <StackPanel Grid.Row="3" Grid.Column="1" Background="#656565">
-            <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="25" RenderTransformOrigin="0.5,0.979" Height="71" VerticalContentAlignment="Center">5</Label>
+                <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="20" RenderTransformOrigin="0.5,0.979" Height="71" Width="71" VerticalContentAlignment="Center">5</Label>
         </StackPanel>
         <StackPanel Grid.Row="3" Grid.Column="2" Background="#656565">
-            <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="25" RenderTransformOrigin="0.5,0.979" Height="71" VerticalContentAlignment="Center">6</Label>
+                <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="20" RenderTransformOrigin="0.5,0.979" Height="71" Width="71" VerticalContentAlignment="Center">6</Label>
         </StackPanel>
         <StackPanel Grid.Row="3" Grid.Column="3" Background="#Fc8e0e">
-            <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="25" RenderTransformOrigin="0.5,0.979" Height="71" VerticalContentAlignment="Center">-</Label>
+                <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="20" RenderTransformOrigin="0.5,0.979" Height="71" Width="71" VerticalContentAlignment="Center">-</Label>
         </StackPanel>
 
         <!--Fila 3-->
         
         <StackPanel Grid.Row="4" Grid.Column="0" Background="#656565">
-            <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="25" RenderTransformOrigin="0.5,0.979" Height="71" VerticalContentAlignment="Center">1</Label>
+                <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="20" RenderTransformOrigin="0.5,0.979" Height="71" Width="71" VerticalContentAlignment="Center">1</Label>
         </StackPanel>
         <StackPanel Grid.Row="4" Grid.Column="1" Background="#656565">
-            <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="25" RenderTransformOrigin="0.5,0.979" Height="71" VerticalContentAlignment="Center">2</Label>
+                <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="20" RenderTransformOrigin="0.5,0.979" Height="71" Width="71" VerticalContentAlignment="Center">2</Label>
         </StackPanel>
         <StackPanel Grid.Row="4" Grid.Column="2" Background="#656565">
-            <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="25" RenderTransformOrigin="0.5,0.979" Height="71" VerticalContentAlignment="Center">3</Label>
+                <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="20" RenderTransformOrigin="0.5,0.979" Height="71" Width="71" VerticalContentAlignment="Center">3</Label>
         </StackPanel>
         <StackPanel Grid.Row="4" Grid.Column="3" Background="#Fc8e0e">
-            <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="25" RenderTransformOrigin="0.5,0.979" Height="71" VerticalContentAlignment="Center">+</Label>
+                <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="20" RenderTransformOrigin="0.5,0.979" Height="71" Width="71" VerticalContentAlignment="Center">+</Label>
         </StackPanel>
 
         <!--Fila 3-->
         <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Background="#656565">
-            <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="25" RenderTransformOrigin="0.5,0.979" Height="71" VerticalContentAlignment="Center">0</Label>
+                <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="20" RenderTransformOrigin="0.5,0.979" Height="71" Width="71" VerticalContentAlignment="Center">0</Label>
         </StackPanel>
         <StackPanel Grid.Row="5" Grid.Column="2" Background="#656565">
-            <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="25" RenderTransformOrigin="0.5,0.979" Height="71" VerticalContentAlignment="Center">,</Label>
+                <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="20" RenderTransformOrigin="0.5,0.979" Height="71" Width="71" VerticalContentAlignment="Center">,</Label>
         </StackPanel>
         <StackPanel Grid.Row="5" Grid.Column="3" Background="#Fc8e0e">
-            <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="25" RenderTransformOrigin="0.5,0.979" Height="71" VerticalContentAlignment="Center">=</Label>
+                <Label HorizontalContentAlignment="Center" FontWeight="Bold" Foreground="#e6e6e6" FontSize="20" RenderTransformOrigin="0.5,0.979" Height="71" Width="71" VerticalContentAlignment="Center">=</Label>
         </StackPanel>
         
     </Grid>
+    </Viewbox>
 </Window>
