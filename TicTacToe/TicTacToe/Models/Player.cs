@@ -20,10 +20,10 @@ namespace TicTacToe.Models
         //{
         //}
 
-        public void SetMark (Mark mark)
-        {
-            this.Mark = mark;
-        }
+        //public void SetMark (Mark mark)
+        //{
+        //    this.Mark = mark;
+        //}
 
 
 

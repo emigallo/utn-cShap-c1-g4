@@ -23,8 +23,8 @@ namespace TicTacToe.Models
         {
             FillMatrix();
             SetPlayers();
-            FirstPlayer.SetMark(Mark.Cross);
-            SecondPlayer.SetMark(Mark.Circle);
+            FirstPlayer.PutMark(Mark.Cross);
+            SecondPlayer.PutMark(Mark.Circle);
 
         }
 
