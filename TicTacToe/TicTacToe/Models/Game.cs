@@ -8,6 +8,7 @@ namespace TicTacToe.Models
 {
     public class Game
     {
+
         public Board Board =new Board();
         public Dice Dice = new Dice();
 
@@ -21,13 +22,14 @@ namespace TicTacToe.Models
 
         public void Start()
         {
+            
             FillMatrix();
             SetPlayers();
             FirstPlayer.SetMark(MarkType.Cross);
             SecondPlayer.SetMark(MarkType.Circle);
-
-            while(!Board.IsFull() && !Board.HasWinner()) {
-
+            
+            while ((Board.IsFull() == false) && (Board.HasWinner() == false)) { //no entra al while
+                
                 if (TurnFirstPlayer) {
 
                     Console.WriteLine("Elija una fila");
@@ -59,6 +61,7 @@ namespace TicTacToe.Models
                 }
 
             }
+            
         }
 
         private void FillMatrix ()
@@ -81,14 +84,14 @@ namespace TicTacToe.Models
 
             if (dicePlayer1>dicePlayer2)
             {
-                    FirstPlayer = _player1;
-                    SecondPlayer = _player2;
+                    this.FirstPlayer = _player1;
+                    this.SecondPlayer = _player2;
                     break;
 
             } else if (dicePlayer2>dicePlayer1)
             {
-                    FirstPlayer = _player2;
-                    SecondPlayer = _player1;
+                    this.FirstPlayer = _player2;
+                    this.SecondPlayer = _player1;
                     break;
 
             } else

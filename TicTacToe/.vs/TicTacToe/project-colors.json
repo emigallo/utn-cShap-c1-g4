@@ -5,7 +5,17 @@
       "ProjectGuid": "b716292d-bdbb-4e28-b0fd-80578cc7596e",
       "DisplayName": "TicTacToe",
       "ColorIndex": 0
+    },
+    "8d43d1cf-147e-4b22-a291-d4718485eb9c": {
+      "ProjectGuid": "8d43d1cf-147e-4b22-a291-d4718485eb9c",
+      "DisplayName": "Program",
+      "ColorIndex": 1
+    },
+    "62a58ec6-6752-416b-87aa-ed379e87344e": {
+      "ProjectGuid": "62a58ec6-6752-416b-87aa-ed379e87344e",
+      "DisplayName": "ConsoleApp1",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 3
 }

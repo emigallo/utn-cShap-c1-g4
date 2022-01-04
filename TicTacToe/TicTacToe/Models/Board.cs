@@ -62,7 +62,8 @@ namespace TicTacToe.Models
         {
             return _winnerPositions.Any(x => Marks[x.Item1.Item1, x.Item1.Item2] == Marks[x.Item2.Item1, x.Item2.Item2]
                                              &&
-                                             Marks[x.Item2.Item1, x.Item2.Item2] == Marks[x.Item3.Item1, x.Item3.Item2]);
+                                             Marks[x.Item2.Item1, x.Item2.Item2] == Marks[x.Item3.Item1, x.Item3.Item2]
+                                             && this.Marks[x.Item1.Item1, x.Item1.Item2] != MarkType.Empty);
         }
 
     }
