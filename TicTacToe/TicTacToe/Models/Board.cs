@@ -11,7 +11,7 @@ namespace TicTacToe.Models
 
         public Mark[,] Marks = new Mark[3, 3];
 
-        private List<((int, int), (int, int), (int, int))> _winnersPosition =
+        private List<((int, int), (int, int), (int, int))> _winnerPositions =
              new List<((int, int), (int, int), (int, int))>
          {
                 ((0,0),(0,1),(0,2)), //Ganador 1era fila
@@ -58,7 +58,12 @@ namespace TicTacToe.Models
         }
 
 
-        
+        public bool HasWinner()
+        {
+            return _winnerPositions.Any(x => Marks[x.Item1.Item1, x.Item1.Item2] == Marks[x.Item2.Item1, x.Item2.Item2]
+                                             &&
+                                             Marks[x.Item2.Item1, x.Item2.Item2] == Marks[x.Item3.Item1, x.Item3.Item2]);
+        }
 
     }
 }

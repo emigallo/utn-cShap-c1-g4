@@ -11,21 +11,10 @@ namespace TicTacToe.Models
         public Mark Mark { get; private set; }
         
 
-        public void PutMark (Mark _mark)
+        public void SetMark (Mark _mark)
         {
             this.Mark = _mark;
         }
-
-        //public void Play (Board board)
-        //{
-        //}
-
-        //public void SetMark (Mark mark)
-        //{
-        //    this.Mark = mark;
-        //}
-
-
 
     }
 }

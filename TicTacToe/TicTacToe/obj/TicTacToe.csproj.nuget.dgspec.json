@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jualotit\\Desktop\\utn-cShap-c1-g4\\TicTacToe\\TicTacToe\\TicTacToe.csproj": {}
+    "C:\\Users\\rmartpri\\Desktop\\utn-cShap-c1-g4\\TicTacToe\\TicTacToe\\TicTacToe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jualotit\\Desktop\\utn-cShap-c1-g4\\TicTacToe\\TicTacToe\\TicTacToe.csproj": {
+    "C:\\Users\\rmartpri\\Desktop\\utn-cShap-c1-g4\\TicTacToe\\TicTacToe\\TicTacToe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jualotit\\Desktop\\utn-cShap-c1-g4\\TicTacToe\\TicTacToe\\TicTacToe.csproj",
+        "projectUniqueName": "C:\\Users\\rmartpri\\Desktop\\utn-cShap-c1-g4\\TicTacToe\\TicTacToe\\TicTacToe.csproj",
         "projectName": "TicTacToe",
-        "projectPath": "C:\\Users\\jualotit\\Desktop\\utn-cShap-c1-g4\\TicTacToe\\TicTacToe\\TicTacToe.csproj",
-        "packagesPath": "C:\\Users\\jualotit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jualotit\\Desktop\\utn-cShap-c1-g4\\TicTacToe\\TicTacToe\\obj\\",
+        "projectPath": "C:\\Users\\rmartpri\\Desktop\\utn-cShap-c1-g4\\TicTacToe\\TicTacToe\\TicTacToe.csproj",
+        "packagesPath": "C:\\Users\\rmartpri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rmartpri\\Desktop\\utn-cShap-c1-g4\\TicTacToe\\TicTacToe\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\jualotit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rmartpri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

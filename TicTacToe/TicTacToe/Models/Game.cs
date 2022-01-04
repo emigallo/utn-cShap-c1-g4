@@ -23,9 +23,24 @@ namespace TicTacToe.Models
         {
             FillMatrix();
             SetPlayers();
-            FirstPlayer.PutMark(Mark.Cross);
-            SecondPlayer.PutMark(Mark.Circle);
+            FirstPlayer.SetMark(Mark.Cross);
+            SecondPlayer.SetMark(Mark.Circle);
 
+            while(!Board.IsFull() && !Board.HasWinner()) {
+
+                if (TurnFirstPlayer) {
+
+                    //FirstPlayer.play();
+                    TurnFirstPlayer = false;
+
+                }
+                else
+                {
+                    //SecondPlayer.play();
+                    TurnFirstPlayer = true;
+                }
+
+            }
         }
 
         private void FillMatrix ()
