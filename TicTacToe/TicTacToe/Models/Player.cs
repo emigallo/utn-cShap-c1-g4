@@ -8,10 +8,10 @@ namespace TicTacToe.Models
 {
     public class Player
     {
-        public Mark Mark { get; private set; }
+        public MarkType Mark { get; private set; }
         
 
-        public void SetMark (Mark _mark)
+        public void SetMark (MarkType _mark)
         {
             this.Mark = _mark;
         }

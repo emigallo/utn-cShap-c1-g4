@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace TicTacToe.Models
 {
-    internal class Board
+    public class Board
     {
 
-        public Mark[,] Marks = new Mark[3, 3];
+        public MarkType[,] Marks = new MarkType[3, 3];
 
         private List<((int, int), (int, int), (int, int))> _winnerPositions =
              new List<((int, int), (int, int), (int, int))>
@@ -27,14 +27,14 @@ namespace TicTacToe.Models
 
 
 
-        public Mark[,] GetMarks()
+        public MarkType[,] GetMarks()
         {
             return this.Marks;
         }
 
         public void SetMarkEmpty (int x, int y)
         {
-            this.Marks[x, y] = Mark.Empty;
+            this.Marks[x, y] = MarkType.Empty;
         }
 
         public Boolean IsFull()
@@ -47,7 +47,7 @@ namespace TicTacToe.Models
             {
                 while (isFull && y<3)
                 {
-                    if (this.Marks[x,y] == Mark.Empty)
+                    if (this.Marks[x,y] == MarkType.Empty)
                     {
                         isFull = false;
                     }

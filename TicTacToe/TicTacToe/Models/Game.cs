@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace TicTacToe.Models
 {
-    internal class Game
+    public class Game
     {
-        public Board Board { get; set; }
-        public Dice Dice { get; set; }
+        public Board Board =new Board();
+        public Dice Dice = new Dice();
 
-        public Player FirstPlayer { get; set; }
-        public Player SecondPlayer { get; set; }
+        public Player FirstPlayer = new Player();
+        public Player SecondPlayer = new Player();
 
-        private Player _player1 { get; set; }
-        private Player _player2 { get; set; }
+        private Player _player1 =new Player();
+        private Player _player2 =new Player();
 
         public Boolean TurnFirstPlayer = true;
 
@@ -23,8 +23,8 @@ namespace TicTacToe.Models
         {
             FillMatrix();
             SetPlayers();
-            FirstPlayer.SetMark(Mark.Cross);
-            SecondPlayer.SetMark(Mark.Circle);
+            FirstPlayer.SetMark(MarkType.Cross);
+            SecondPlayer.SetMark(MarkType.Circle);
 
             while(!Board.IsFull() && !Board.HasWinner()) {
 
@@ -39,7 +39,7 @@ namespace TicTacToe.Models
                     colSelected = Int32.Parse(Console.ReadLine());
                     
                     MarkPosition mark= new MarkPosition(rowSelected, colSelected);
-                    SetMarkPosition(mark, Mark.Cross);
+                    SetMarkPosition(mark, MarkType.Cross);
                     TurnFirstPlayer = false;
 
                 }
@@ -54,7 +54,7 @@ namespace TicTacToe.Models
                     colSelected = Int32.Parse(Console.ReadLine());
 
                     MarkPosition mark = new MarkPosition(rowSelected, colSelected);
-                    SetMarkPosition(mark, Mark.Circle);
+                    SetMarkPosition(mark, MarkType.Circle);
                     TurnFirstPlayer = true;
                 }
 
@@ -100,9 +100,9 @@ namespace TicTacToe.Models
             }
         }
 
-        public void SetMarkPosition(MarkPosition markPos, Mark markType)
+        public void SetMarkPosition(MarkPosition markPos, MarkType markType)
         {
-            if (Board.Marks[markPos.X, markPos.Y] == Mark.Empty)
+            if (Board.Marks[markPos.X, markPos.Y] == MarkType.Empty)
             {
                 Board.Marks[markPos.X, markPos.Y] = markType;
             }

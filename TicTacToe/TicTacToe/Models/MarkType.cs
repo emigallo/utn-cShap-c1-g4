@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TicTacToe.Models
 {
-    public enum Mark
+    public enum MarkType
     {
         Cross,
         Circle,

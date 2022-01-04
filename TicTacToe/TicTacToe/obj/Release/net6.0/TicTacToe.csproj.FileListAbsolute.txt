@@ -1,0 +1,12 @@
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\TicTacToe\TicTacToe\bin\Release\net6.0\TicTacToe.deps.json
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\TicTacToe\TicTacToe\bin\Release\net6.0\TicTacToe.dll
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\TicTacToe\TicTacToe\bin\Release\net6.0\ref\TicTacToe.dll
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\TicTacToe\TicTacToe\bin\Release\net6.0\TicTacToe.pdb
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\TicTacToe\TicTacToe\obj\Release\net6.0\TicTacToe.csproj.AssemblyReference.cache
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\TicTacToe\TicTacToe\obj\Release\net6.0\TicTacToe.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\TicTacToe\TicTacToe\obj\Release\net6.0\TicTacToe.AssemblyInfoInputs.cache
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\TicTacToe\TicTacToe\obj\Release\net6.0\TicTacToe.AssemblyInfo.cs
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\TicTacToe\TicTacToe\obj\Release\net6.0\TicTacToe.csproj.CoreCompileInputs.cache
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\TicTacToe\TicTacToe\obj\Release\net6.0\TicTacToe.dll
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\TicTacToe\TicTacToe\obj\Release\net6.0\ref\TicTacToe.dll
+C:\Users\rmartpri\Desktop\utn-cShap-c1-g4\TicTacToe\TicTacToe\obj\Release\net6.0\TicTacToe.pdb

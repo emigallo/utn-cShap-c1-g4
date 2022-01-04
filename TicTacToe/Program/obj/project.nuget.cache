@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "6axyO0hJgUPkp12pVnZTW704MuQEEsgnH7FQV4xPvciVXvSUwUxD1wunLzLl7uyJklmcZNrSJ23i/4+NLHP1nw==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\rmartpri\\Desktop\\utn-cShap-c1-g4\\TicTacToe\\Program\\Program.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "El proyecto TicTacToe no es compatible con net5.0 (.NETCoreApp,Version=v5.0). El proyecto TicTacToe admite: net6.0 (.NETCoreApp,Version=v6.0)",
+      "libraryId": "TicTacToe",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
+}
