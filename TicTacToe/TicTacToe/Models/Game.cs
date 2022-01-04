@@ -30,13 +30,15 @@ namespace TicTacToe.Models
 
                 if (TurnFirstPlayer) {
 
-                    //FirstPlayer.play();
+                    //MarkPosition mark= FirstPlayer.ChoosePosition
+                    //SetMarkPosition(MarkPosition mark, Mark.Cross)
                     TurnFirstPlayer = false;
 
                 }
                 else
                 {
-                    //SecondPlayer.play();
+                    //MarkPosition mark= SecondPlayer.ChoosePosition
+                    //SetMarkPosition(MarkPosition mark, Mark.Circle)
                     TurnFirstPlayer = true;
                 }
 
@@ -82,7 +84,17 @@ namespace TicTacToe.Models
             }
         }
 
-
+        public void SetMarkPosition(MarkPosition markPos, Mark markType)
+        {
+            if (Board.Marks[markPos.X, markPos.Y] == Mark.Empty)
+            {
+                Board.Marks[markPos.X, markPos.Y] = markType;
+            }
+            else
+            {
+                //TODO: lanzar excepcion de que esa posicion ya esta ocupada
+            }
+        }
 
     }
 }

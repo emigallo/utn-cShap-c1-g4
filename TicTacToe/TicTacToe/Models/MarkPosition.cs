@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace TicTacToe.Models
 {
-    internal class MarkPosition
+    public class MarkPosition
     {
+        public int X { get; }
+        public int Y { get; }
+
+        public MarkPosition(int x, int y)
+        { //validar que ingrese numeros validos
+            X = x;
+            Y = y;
+        }
     }
 }

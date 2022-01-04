@@ -16,5 +16,6 @@ namespace TicTacToe.Models
             this.Mark = _mark;
         }
 
+        
     }
 }
