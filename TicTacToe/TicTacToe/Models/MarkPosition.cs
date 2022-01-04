@@ -12,7 +12,9 @@ namespace TicTacToe.Models
         public int Y { get; }
 
         public MarkPosition(int x, int y)
-        { //validar que ingrese numeros validos
+        {
+            if (x < 0 || x > 2) throw new Exception("debe elegir un numero entre 0 y 2");
+            if (x < 0 || y > 2) throw new Exception("debe elegir un numero entre 0 y 2");
             X = x;
             Y = y;
         }

@@ -30,15 +30,31 @@ namespace TicTacToe.Models
 
                 if (TurnFirstPlayer) {
 
-                    //MarkPosition mark= FirstPlayer.ChoosePosition
-                    //SetMarkPosition(MarkPosition mark, Mark.Cross)
+                    Console.WriteLine("Elija una fila");
+                    int rowSelected;
+                    rowSelected = Int32.Parse(Console.ReadLine());
+
+                    Console.WriteLine("Elija una columna");
+                    int colSelected;
+                    colSelected = Int32.Parse(Console.ReadLine());
+                    
+                    MarkPosition mark= new MarkPosition(rowSelected, colSelected);
+                    SetMarkPosition(mark, Mark.Cross);
                     TurnFirstPlayer = false;
 
                 }
                 else
                 {
-                    //MarkPosition mark= SecondPlayer.ChoosePosition
-                    //SetMarkPosition(MarkPosition mark, Mark.Circle)
+                    Console.WriteLine("Elija una fila");
+                    int rowSelected;
+                    rowSelected = Int32.Parse(Console.ReadLine());
+
+                    Console.WriteLine("Elija una columna");
+                    int colSelected;
+                    colSelected = Int32.Parse(Console.ReadLine());
+
+                    MarkPosition mark = new MarkPosition(rowSelected, colSelected);
+                    SetMarkPosition(mark, Mark.Circle);
                     TurnFirstPlayer = true;
                 }
 
@@ -92,7 +108,8 @@ namespace TicTacToe.Models
             }
             else
             {
-                //TODO: lanzar excepcion de que esa posicion ya esta ocupada
+                throw new Exception("esa posicion ya esta ocupada, debe elegir otra");
+               
             }
         }
 
