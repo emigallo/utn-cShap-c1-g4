@@ -28,10 +28,10 @@ namespace TicTacToe.Models
             FirstPlayer.SetMark(MarkType.Cross);
             SecondPlayer.SetMark(MarkType.Circle);
             
-            while ((Board.IsFull() == false) && (Board.HasWinner() == false)) { //no entra al while
+            while ((Board.IsFull() == false) && (Board.HasWinner() == false)) {
                 
                 if (TurnFirstPlayer) {
-
+                    Console.WriteLine("Turno Juagador 1:");
                     Console.WriteLine("Elija una fila");
                     int rowSelected;
                     rowSelected = Int32.Parse(Console.ReadLine());
@@ -43,10 +43,11 @@ namespace TicTacToe.Models
                     MarkPosition mark= new MarkPosition(rowSelected, colSelected);
                     SetMarkPosition(mark, MarkType.Cross);
                     TurnFirstPlayer = false;
-
+                    Console.WriteLine("muere aca"); //TODO fixear esto, se queda ahi y no sale
                 }
                 else
                 {
+                    Console.WriteLine("Turno Juagador 2:");
                     Console.WriteLine("Elija una fila");
                     int rowSelected;
                     rowSelected = Int32.Parse(Console.ReadLine());
@@ -61,7 +62,36 @@ namespace TicTacToe.Models
                 }
 
             }
-            
+            /*aca salio del while
+             3 opciones: 
+                -se lleno el tablero y hay empate
+                -hay un ganador
+                -se lleno el tablero y a su vez hay ganador (gano con la ultima ficha)
+             */
+            obtenerResultado(Board.IsFull(), Board.HasWinner(), TurnFirstPlayer);
+            Console.WriteLine("llega aca");
+
+        }
+
+
+        public void obtenerResultado(Boolean boardStatus, Boolean winnerStatus, Boolean turnFstPlayer)
+        {
+            if (winnerStatus) {
+                
+                if (turnFstPlayer) //despues de jugar se cambia el turn, por lo tanto si el jugador 2 gano, despues de poner la ficha cambio el turno y quedo true para el 1
+                {
+                    Console.WriteLine("Gano el jugador 2");
+                }
+                else
+                {
+                    Console.WriteLine("Gano el jugador 1");
+                }
+            }
+            else {
+                
+                Console.WriteLine("Hubo empate");
+
+            }
         }
 
         private void FillMatrix ()
