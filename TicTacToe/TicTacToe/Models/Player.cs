@@ -11,9 +11,9 @@ namespace TicTacToe.Models
         public MarkType Mark { get; private set; }
         
 
-        public void SetMark (MarkType _mark)
+        public void SetMark (MarkType mark)
         {
-            this.Mark = _mark;
+            this.Mark = mark;
         }
 
         

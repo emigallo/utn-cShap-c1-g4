@@ -15,8 +15,8 @@ namespace TicTacToe.Models
         public Player FirstPlayer = new Player();
         public Player SecondPlayer = new Player();
 
-        private Player _player1 =new Player();
-        private Player _player2 =new Player();
+        private Player player1 =new Player();
+        private Player player2 =new Player();
 
         public Boolean TurnFirstPlayer = true;
 
@@ -114,14 +114,14 @@ namespace TicTacToe.Models
 
             if (dicePlayer1>dicePlayer2)
             {
-                    this.FirstPlayer = _player1;
-                    this.SecondPlayer = _player2;
+                    this.FirstPlayer = player1;
+                    this.SecondPlayer = player2;
                     break;
 
             } else if (dicePlayer2>dicePlayer1)
             {
-                    this.FirstPlayer = _player2;
-                    this.SecondPlayer = _player1;
+                    this.FirstPlayer = player2;
+                    this.SecondPlayer = player1;
                     break;
 
             } else
