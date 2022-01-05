@@ -9,16 +9,21 @@ namespace TicTacToe.Models
     public class Game
     {
 
-        public Board Board =new Board();
-        public Dice Dice = new Dice();
+        private Board Board =new Board();
+        private Dice Dice = new Dice();
 
-        public Player FirstPlayer = new Player();
-        public Player SecondPlayer = new Player();
+        private Player FirstPlayer = new Player();
+        private Player SecondPlayer = new Player();
 
         private Player _player1 =new Player();
         private Player _player2 =new Player();
 
-        public Boolean TurnFirstPlayer = true;
+        private Boolean TurnFirstPlayer = true;
+
+        public Game ()
+        {
+
+        }
 
         public void Start()
         {
@@ -52,7 +57,7 @@ namespace TicTacToe.Models
 
 
 
-        public void ObtenerResultado(Boolean boardStatus, Boolean winnerStatus, Boolean turnFstPlayer)
+        private void ObtenerResultado(Boolean boardStatus, Boolean winnerStatus, Boolean turnFstPlayer)
         {
             if (winnerStatus) {
                 
@@ -120,7 +125,7 @@ namespace TicTacToe.Models
             SecondPlayer.SetMark(MarkType.Circle);
         }
 
-        public void SetMarkPosition(MarkPosition markPos, Player player)
+        private void SetMarkPosition(MarkPosition markPos, Player player)
         {
 
             Boolean Assigned = false;
