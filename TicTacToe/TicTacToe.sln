@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToe", "TicTacToe\TicTacToe.csproj", "{B716292D-BDBB-4E28-B0FD-80578CC7596E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View", "View\View.csproj", "{2EA76A51-59A4-4B92-AAFB-DDF3A5A1F138}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GUI", "View\GUI.csproj", "{2EA76A51-59A4-4B92-AAFB-DDF3A5A1F138}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
