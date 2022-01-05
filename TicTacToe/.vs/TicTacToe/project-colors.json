@@ -25,7 +25,12 @@
       "ProjectGuid": "2ea76a51-59a4-4b92-aafb-ddf3a5a1f138",
       "DisplayName": "GUI",
       "ColorIndex": 3
+    },
+    "e42ced91-92cb-4ca8-8044-e18150dcf42e": {
+      "ProjectGuid": "e42ced91-92cb-4ca8-8044-e18150dcf42e",
+      "DisplayName": "Consola",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 5
 }
