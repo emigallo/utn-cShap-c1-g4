@@ -25,20 +25,16 @@ namespace TicTacToe.Models
             
             FillMatrix();
             SetPlayers();
-            FirstPlayer.SetMark(MarkType.Cross);
-            SecondPlayer.SetMark(MarkType.Circle);
             
-            while ((Board.IsFull() == false) && (Board.HasWinner() == false)) {
+            while (!Board.IsFull() && !Board.HasWinner()) {
                 
                 if (TurnFirstPlayer) {
                     Console.WriteLine("Turno Juagador 1:");
                     Console.WriteLine("Elija una fila");
-                    int rowSelected;
-                    rowSelected = Int32.Parse(Console.ReadLine());
+                    int rowSelected = Int32.Parse(Console.ReadLine());
 
                     Console.WriteLine("Elija una columna");
-                    int colSelected;
-                    colSelected = Int32.Parse(Console.ReadLine());
+                    int colSelected = Int32.Parse(Console.ReadLine());
                     
                     MarkPosition mark= new MarkPosition(rowSelected, colSelected);
 
@@ -115,32 +111,41 @@ namespace TicTacToe.Models
             }
         }
 
-        private void SetPlayers ()
+        private void SetPlayers() //poner un booleano por fuera
         {
             var dicePlayer1 = Dice.Throw();
             var dicePlayer2 = Dice.Throw();
+            Boolean hasWinner = true;
 
-            while (true) { 
-
-            if (dicePlayer1>dicePlayer2)
+            while (hasWinner)
             {
-                    this.FirstPlayer = _player1;
-                    this.SecondPlayer = _player2;
-                    break;
 
-            } else if (dicePlayer2>dicePlayer1)
-            {
-                    this.FirstPlayer = _player2;
-                    this.SecondPlayer = _player1;
-                    break;
+                if (dicePlayer1 > dicePlayer2)
+                {
+                    FirstPlayer = _player1;
+                    SecondPlayer = _player2;
+                    hasWinner = false;
 
-            } else
-            {
-                dicePlayer1 = Dice.Throw();
-                dicePlayer2 = Dice.Throw();
+                }
+                else
+                {
+                    if (dicePlayer2 > dicePlayer1)
+                    {
+                        FirstPlayer = _player2;
+                        SecondPlayer = _player1;
+                        hasWinner = false;
+
+                    }
+                    else
+                    {
+                        dicePlayer1 = Dice.Throw();
+                        dicePlayer2 = Dice.Throw();
+                    }
+
+                }
             }
-
-            }
+            FirstPlayer.SetMark(MarkType.Cross);
+            SecondPlayer.SetMark(MarkType.Circle);
         }
 
         public void SetMarkPosition(MarkPosition markPos, MarkType markType)
