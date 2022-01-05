@@ -4,21 +4,23 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Calculadora"
+        Title="Tic Tac Toe"
         Height="800"
         Width="800">
-    <Grid Background="black">
+    <Grid>
+        <Grid Background="black">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-
+        
 
         <Button Grid.Column="0"></Button>
 
@@ -37,13 +39,14 @@
         <Button Grid.Column="1" Grid.Row="2"></Button>
 
         <Button Grid.Column="2" Grid.Row="2"></Button>
+        
+    </Grid>
 
-
-        <!--<Button x:Name="StartNewGame" Content="New Game!"  Grid.Row="2"  Click="btnNewGame_Click" Height="186" Width="564" Grid.ColumnSpan="3" Margin="133,32,103,43"/>-->
-
-
-
-
+    <Button x:Name="StartNewGame" Content="New Game!" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center"/>
 
     </Grid>
+    <!--Click="btnNewGame_Click"-->
+
+
+    
 </Window>
