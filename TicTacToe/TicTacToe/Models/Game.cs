@@ -25,62 +25,34 @@ namespace TicTacToe.Models
             
             FillMatrix();
             SetPlayers();
+            Play();
             
-            while (!Board.IsFull() && !Board.HasWinner()) {
-                
-                if (TurnFirstPlayer) {
-                    Console.WriteLine("Turno Juagador 1:");
-                    Console.WriteLine("Elija una fila");
-                    int rowSelected = Int32.Parse(Console.ReadLine());
-
-                    Console.WriteLine("Elija una columna");
-                    int colSelected = Int32.Parse(Console.ReadLine());
-                    
-                    MarkPosition mark= new MarkPosition(rowSelected, colSelected);
-
-                    try
-                    {
-
-                        SetMarkPosition(mark, MarkType.Cross);
-
-                    }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine("debe elegir otra posicion, esa ya esta ocupada");
-                    }
-
-                    TurnFirstPlayer = false;
-
-                }
-                else
-                {
-                    Console.WriteLine("Turno Juagador 2:");
-                    Console.WriteLine("Elija una fila");
-                    int rowSelected;
-                    rowSelected = Int32.Parse(Console.ReadLine());
-
-                    Console.WriteLine("Elija una columna");
-                    int colSelected;
-                    colSelected = Int32.Parse(Console.ReadLine());
-
-                    MarkPosition mark = new MarkPosition(rowSelected, colSelected);
-                    SetMarkPosition(mark, MarkType.Circle);
-                    TurnFirstPlayer = true;
-                }
-
-            }
-            /*aca salio del while
-             3 opciones: 
-                -se lleno el tablero y hay empate
-                -hay un ganador
-                -se lleno el tablero y a su vez hay ganador (gano con la ultima ficha)
-             */
-            obtenerResultado(Board.IsFull(), Board.HasWinner(), TurnFirstPlayer);
+            ObtenerResultado(Board.IsFull(), Board.HasWinner(), TurnFirstPlayer);
 
         }
 
+        public void Play()
+        {
+            while (!Board.IsFull() && !Board.HasWinner())
+            {
+                if (TurnFirstPlayer)
+                {
+                    Console.WriteLine("Turno Jugador 1");
+                    SetMarkPosition(FirstPlayer.Play(), FirstPlayer);
+                    
+                } else
+                {
+                    Console.WriteLine("Turno Jugador 2");
+                    SetMarkPosition(SecondPlayer.Play(), SecondPlayer);
+                }
+            }
+        }
 
-        public void obtenerResultado(Boolean boardStatus, Boolean winnerStatus, Boolean turnFstPlayer)
+
+
+
+
+        public void ObtenerResultado(Boolean boardStatus, Boolean winnerStatus, Boolean turnFstPlayer)
         {
             if (winnerStatus) {
                 
@@ -148,18 +120,26 @@ namespace TicTacToe.Models
             SecondPlayer.SetMark(MarkType.Circle);
         }
 
-        public void SetMarkPosition(MarkPosition markPos, MarkType markType)
+        public void SetMarkPosition(MarkPosition markPos, Player player)
         {
-            if (Board.Marks[markPos.X, markPos.Y] == MarkType.Empty)
-            {
-                Board.Marks[markPos.X, markPos.Y] = markType;
-            }
-            else
-            {
-                throw new Exception("esa posicion ya esta ocupada, debe elegir otra");
+
+            Boolean Assigned = false;
+
+            while (!Assigned) { 
+
+                if (Board.Marks[markPos.X, markPos.Y] == MarkType.Empty)
+                {
+                    Board.Marks[markPos.X, markPos.Y] = player.Mark;
+                    Assigned = true;
+                    TurnFirstPlayer = !TurnFirstPlayer;
+                }
+                else
+                {
+                    Console.WriteLine("Error! Esa celda ya está ocupada.");
+                    markPos = player.Play();
                
+                }
             }
         }
-
     }
 }
