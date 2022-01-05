@@ -15,8 +15,8 @@ namespace TicTacToe.Models
         public Player FirstPlayer = new Player();
         public Player SecondPlayer = new Player();
 
-        private Player player1 =new Player();
-        private Player player2 =new Player();
+        private Player _player1 =new Player();
+        private Player _player2 =new Player();
 
         public Boolean TurnFirstPlayer = true;
 
@@ -41,9 +41,20 @@ namespace TicTacToe.Models
                     colSelected = Int32.Parse(Console.ReadLine());
                     
                     MarkPosition mark= new MarkPosition(rowSelected, colSelected);
-                    SetMarkPosition(mark, MarkType.Cross);
+
+                    try
+                    {
+
+                        SetMarkPosition(mark, MarkType.Cross);
+
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("debe elegir otra posicion, esa ya esta ocupada");
+                    }
+
                     TurnFirstPlayer = false;
-                    Console.WriteLine("muere aca"); //TODO fixear esto, se queda ahi y no sale
+
                 }
                 else
                 {
@@ -69,7 +80,6 @@ namespace TicTacToe.Models
                 -se lleno el tablero y a su vez hay ganador (gano con la ultima ficha)
              */
             obtenerResultado(Board.IsFull(), Board.HasWinner(), TurnFirstPlayer);
-            Console.WriteLine("llega aca");
 
         }
 
@@ -114,14 +124,14 @@ namespace TicTacToe.Models
 
             if (dicePlayer1>dicePlayer2)
             {
-                    this.FirstPlayer = player1;
-                    this.SecondPlayer = player2;
+                    this.FirstPlayer = _player1;
+                    this.SecondPlayer = _player2;
                     break;
 
             } else if (dicePlayer2>dicePlayer1)
             {
-                    this.FirstPlayer = player2;
-                    this.SecondPlayer = player1;
+                    this.FirstPlayer = _player2;
+                    this.SecondPlayer = _player1;
                     break;
 
             } else

@@ -50,8 +50,11 @@ namespace TicTacToe.Models
                     if (this.Marks[x,y] == MarkType.Empty)
                     {
                         isFull = false;
+                        
                     }
+                    y++;
                 }
+                x++;
             }
 
             return isFull;
