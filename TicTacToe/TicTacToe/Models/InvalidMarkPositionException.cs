@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace TicTacToe
 {
-    internal class Class1
+    public class InvalidMarkPositionException : Exception
     {
+        public InvalidMarkPositionException(string message) : base(message)
+        {
+
+        }
     }
 }
