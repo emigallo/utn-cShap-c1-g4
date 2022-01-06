@@ -12,11 +12,11 @@ namespace TicTacToe.Models
         private Board Board =new Board();
         private Dice Dice = new Dice();
 
-        private Player FirstPlayer = new Player();
-        private Player SecondPlayer = new Player();
+        private Player FirstPlayer;
+        private Player SecondPlayer;
 
-        private Player _player1 =new Player();
-        private Player _player2 =new Player();
+        //private Player _player1 =new Player();
+        //private Player _player2 =new Player();
 
         private Boolean TurnFirstPlayer = true;
 
@@ -29,9 +29,8 @@ namespace TicTacToe.Models
         {
             
             FillMatrix();
-            SetPlayers();
+            //SetPlayers();
             Play();
-            
             ObtenerResultado(Board.IsFull(), Board.HasWinner(), TurnFirstPlayer);
 
         }
@@ -77,7 +76,7 @@ namespace TicTacToe.Models
             }
         }
 
-        private void FillMatrix ()
+        public void FillMatrix ()
         {
             for (int x = 0; x < 3; x++ )
             {
@@ -88,7 +87,7 @@ namespace TicTacToe.Models
             }
         }
 
-        private void SetPlayers() //poner un booleano por fuera
+        public void SetPlayers(Player _player1, Player _player2) 
         {
             var dicePlayer1 = Dice.Throw();
             var dicePlayer2 = Dice.Throw();
@@ -125,7 +124,7 @@ namespace TicTacToe.Models
             SecondPlayer.SetMark(MarkType.Circle);
         }
 
-        private void SetMarkPosition(MarkPosition markPos, Player player)
+        public void SetMarkPosition(MarkPosition markPos, Player player)
         {
 
             Boolean Assigned = false;
@@ -140,10 +139,22 @@ namespace TicTacToe.Models
                 }
                 else
                 {
-                    Console.WriteLine("Error! Esa celda ya está ocupada.");
+                    Console.WriteLine("Error! Esa celda ya está ocupada."); //tirar pop up
                     markPos = player.Play();
                
                 }
+            }
+        }
+
+        public Player GetNextPlayer()
+        {
+            if (TurnFirstPlayer)
+            {
+                return FirstPlayer;
+            }
+            else
+            {
+                return SecondPlayer;
             }
         }
     }

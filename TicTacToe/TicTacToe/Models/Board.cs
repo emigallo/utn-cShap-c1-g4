@@ -40,22 +40,33 @@ namespace TicTacToe.Models
         public Boolean IsFull()
         {
             Boolean isFull = true;
-            int x = 0;
-            int y = 0;
+           
 
-            while (isFull && x<3)
+            for(int x = 0; x<3; x++)
             {
-                while (isFull && y<3)
+                for(int y = 0; y<3; y++)
                 {
-                    if (this.Marks[x,y] == MarkType.Empty)
+                    if (this.Marks[x, y] == MarkType.Empty)
                     {
                         isFull = false;
-                        
+
                     }
-                    y++;
                 }
-                x++;
             }
+
+            //while (isFull && x<3)
+            //{
+            //    while (isFull && y<3)
+            //    {
+            //        if (this.Marks[x,y] == MarkType.Empty)
+            //        {
+            //            isFull = false;
+                        
+            //        }
+            //        y++;
+            //    }
+            //    x++;
+            //}
 
             return isFull;
         }
