@@ -25,7 +25,8 @@ namespace View.ViewModels
 
         public void PutMark(int x, int y)
         {
-            //game.SetMarkPosition();
+            MarkPosition mp = new MarkPosition(x, y);
+            game.SetMarkPosition(mp, game.GetNextPlayer());
         }
      
 
