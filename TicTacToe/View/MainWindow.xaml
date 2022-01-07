@@ -7,7 +7,7 @@
         Title="Tic Tac Toe"
         Height="800"
         Width="800">
-    
+
     <Grid>
         <Grid Background="White">
             <Grid.RowDefinitions>
@@ -43,8 +43,8 @@
             <local:GameButton X="2" Y="2" Grid.Column="2" Grid.Row="2"></local:GameButton>
             -->
 
-            
-            
+
+
             <Button Grid.Column="0" Content="0,0" Click="MarkButton_Click" Style="{StaticResource StandardButton}"></Button>
             <Button Grid.Column="1" Content="0,1" Click="MarkButton_Click" Style="{StaticResource StandardButton}"></Button>
             <Button Grid.Column="2" Content="0,2" Click="MarkButton_Click" Style="{StaticResource StandardButton}"></Button>
@@ -65,7 +65,7 @@
 
         </Grid>
 
-        <Button x:Name="StartNewGame" Content="New Game!" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="48,624,0,0" Click="NewGameButton_Click"/>
+        <Button x:Name="StartNewGame" Content=" New Game! " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,610,0,0" Click="NewGameButton_Click" Style="{StaticResource StartButton}"/>
 
     </Grid>
 
