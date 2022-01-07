@@ -28,10 +28,9 @@ namespace GUI.Views
 
         public void MarkButton_Click(object sender, RoutedEventArgs e)
         {
-            Button button = sender as Button;
-            int x = 0;
-            int y = 0;
-            _vm.PutMark(x, y);
+            GameButton button = sender as GameButton;
+
+            _vm.PutMark(button.X, button.Y);
         }
 
         

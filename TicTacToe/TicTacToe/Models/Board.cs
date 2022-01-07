@@ -54,20 +54,6 @@ namespace TicTacToe.Models
                 }
             }
 
-            //while (isFull && x<3)
-            //{
-            //    while (isFull && y<3)
-            //    {
-            //        if (this.Marks[x,y] == MarkType.Empty)
-            //        {
-            //            isFull = false;
-                        
-            //        }
-            //        y++;
-            //    }
-            //    x++;
-            //}
-
             return isFull;
         }
 

@@ -7,10 +7,10 @@ using System.Windows.Controls;
 
 namespace GUI
 {
-    class GameButton : Button
+    public class GameButton : Button
     {
-        int x;
-        int y;
+        public int X { get;  set; }
+        public int Y { get;  set; }
 
     }
 }

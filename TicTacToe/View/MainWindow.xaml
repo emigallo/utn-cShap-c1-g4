@@ -25,23 +25,23 @@
             </Grid.ColumnDefinitions>
 
 
-            <local:GameButton Grid.Column="0"></local:GameButton>
+            <local:GameButton X="0" Y="0" Grid.Column="0"></local:GameButton>
 
-            <local:GameButton Grid.Column="1"></local:GameButton>
+            <local:GameButton X="0" Y="1" Grid.Column="1"></local:GameButton>
 
-            <local:GameButton Grid.Column="2"></local:GameButton>
+            <local:GameButton X="0" Y="2" Grid.Column="2"></local:GameButton>
 
-            <local:GameButton Grid.Column="0" Grid.Row="1"></local:GameButton>
+            <local:GameButton X="1" Y="0" Grid.Column="0" Grid.Row="1"></local:GameButton>
 
-            <local:GameButton Grid.Column="1" Grid.Row="1"></local:GameButton>
+            <local:GameButton X="1" Y="1" Grid.Column="1" Grid.Row="1"></local:GameButton>
 
-            <local:GameButton Grid.Column="2" Grid.Row="1"></local:GameButton>
+            <local:GameButton X="1" Y="2" Grid.Column="2" Grid.Row="1"></local:GameButton>
 
-            <local:GameButton Grid.Column="0" Grid.Row="2"></local:GameButton>
+            <local:GameButton X="2" Y="0" Grid.Column="0" Grid.Row="2"></local:GameButton>
 
-            <local:GameButton Grid.Column="1" Grid.Row="2"></local:GameButton>
+            <local:GameButton X="2" Y="1" Grid.Column="1" Grid.Row="2"></local:GameButton>
 
-            <local:GameButton Grid.Column="2" Grid.Row="2"></local:GameButton>
+            <local:GameButton X="2" Y="2" Grid.Column="2" Grid.Row="2"></local:GameButton>
 
 
             <Label Background="White" Grid.Row="2" Grid.ColumnSpan="3" Margin="0,196,0,0" Grid.RowSpan="2"/>
