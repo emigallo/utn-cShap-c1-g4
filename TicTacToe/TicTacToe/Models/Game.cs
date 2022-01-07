@@ -30,8 +30,8 @@ namespace TicTacToe.Models
             
             FillMatrix();
             //SetPlayers();
-            Play();
-            ObtenerResultado(Board.IsFull(), Board.HasWinner(), TurnFirstPlayer);
+            //Play();
+            //ObtenerResultado(Board.IsFull(), Board.HasWinner(), TurnFirstPlayer);
 
         }
 
@@ -139,8 +139,9 @@ namespace TicTacToe.Models
                 }
                 else
                 {
-                    Console.WriteLine("Error! Esa celda ya está ocupada."); //tirar pop up
-                    markPos = player.Play();
+                    /*Console.WriteLine("Error! Esa celda ya está ocupada."); //tirar pop up
+                    markPos = player.Play();*/
+                    throw new Exception("Ya estaba ocupada");
                
                 }
             }
@@ -156,6 +157,17 @@ namespace TicTacToe.Models
             {
                 return SecondPlayer;
             }
+        }
+
+
+        public Boolean IsFull ()
+        {
+            return this.Board.IsFull();
+        }
+
+        public Boolean HasWinner()
+        {
+            return this.Board.HasWinner();
         }
     }
 }

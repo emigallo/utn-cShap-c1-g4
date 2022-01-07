@@ -28,9 +28,32 @@ namespace GUI.Views
 
         public void MarkButton_Click(object sender, RoutedEventArgs e)
         {
-            GameButton button = sender as GameButton;
+            //GameButton button = sender as GameButton;
+            Button button = sender as Button;
+            var coords = button.Content.ToString();
+            char[] charArr = coords.ToCharArray();
 
-            _vm.PutMark(button.X, button.Y);
+            char coordX = charArr[0];
+            char coordY = charArr[2];
+
+            int x = coordX - '0';
+            int y = coordY - '0';
+
+
+            _vm.PutMark(x, y);
+            button.Content = "X";
+            //ver como deshabilitar esta posición que se marca acá
+            button.IsEnabled = false;
+        }
+
+        public void Game ()
+        {
+            while (!_vm.GameEnded())
+            {
+            
+
+
+            }
         }
 
         

@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:GUI"
         mc:Ignorable="d"
         Title="Tic Tac Toe"
         Height="800"
@@ -24,7 +23,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-
+            <!--
             <local:GameButton X="0" Y="0" Grid.Column="0"></local:GameButton>
 
             <local:GameButton X="0" Y="1" Grid.Column="1"></local:GameButton>
@@ -42,8 +41,23 @@
             <local:GameButton X="2" Y="1" Grid.Column="1" Grid.Row="2"></local:GameButton>
 
             <local:GameButton X="2" Y="2" Grid.Column="2" Grid.Row="2"></local:GameButton>
+            -->
 
-
+            <Button Grid.Column="0" Content="0,0" Click="MarkButton_Click"></Button>
+            <Button Grid.Column="1" Content="0,1" Click="MarkButton_Click"></Button>
+            <Button Grid.Column="2" Content="0,2" Click="MarkButton_Click"></Button>
+            <Button Grid.Column="0" Grid.Row="1" Content="1,0" Click="MarkButton_Click"></Button>
+            <Button Grid.Column="1" Grid.Row="1" Content="1,1" Click="MarkButton_Click"></Button>
+            <Button Grid.Column="2" Grid.Row="1" Content="1,2" Click="MarkButton_Click"></Button>
+            <Button Grid.Column="0" Grid.Row="2" Content="2,0" Click="MarkButton_Click"></Button>
+            <Button Grid.Column="1" Grid.Row="2" Content="2,1" Click="MarkButton_Click"></Button>
+            <Button Grid.Column="2" Grid.Row="2" Content="2,2" Click="MarkButton_Click"></Button>
+            
+            
+            
+            
+            
+            
             <Label Background="White" Grid.Row="2" Grid.ColumnSpan="3" Margin="0,196,0,0" Grid.RowSpan="2"/>
 
         </Grid>
