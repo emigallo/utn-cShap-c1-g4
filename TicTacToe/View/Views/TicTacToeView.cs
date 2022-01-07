@@ -7,6 +7,7 @@ using GUI.Views;
 using System.Windows;
 using System.Windows.Controls;
 using View.ViewModels;
+using TicTacToe.Models;
 
 namespace GUI.Views
 {
@@ -41,24 +42,29 @@ namespace GUI.Views
 
 
             _vm.PutMark(x, y);
-            button.Content = "X";
-            //ver como deshabilitar esta posición que se marca acá
+            button.Content = _vm.GetMarkCurrentPlayer();
             button.IsEnabled = false;
-        }
 
-        public void Game ()
-        {
-            while (!_vm.GameEnded())
+            if (_vm.GameEnded())
             {
-            
+                var markWinner = _vm.CheckWinner();
 
-
+                if (markWinner == MarkType.Empty)
+                {
+                    Winner.Content = "Hubo empate";
+                } else if (markWinner == MarkType.Cross)
+                {
+                    Winner.Content = "Ganó X";
+                } else
+                    {
+                    Winner.Content = "Ganó O";
+                    }
+                }                
             }
         }
 
-        
     }
 
    
-}
+
 

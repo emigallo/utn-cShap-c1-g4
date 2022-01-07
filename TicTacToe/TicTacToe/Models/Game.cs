@@ -56,23 +56,20 @@ namespace TicTacToe.Models
 
 
 
-        private void ObtenerResultado(Boolean boardStatus, Boolean winnerStatus, Boolean turnFstPlayer)
+        public MarkType ObtenerResultado()
         {
-            if (winnerStatus) {
-                
-                if (turnFstPlayer) //despues de jugar se cambia el turn, por lo tanto si el jugador 2 gano, despues de poner la ficha cambio el turno y quedo true para el 1
+            if (!Board.HasWinner())
+            {
+                return MarkType.Empty;
+            } else
+            {
+                if (TurnFirstPlayer)
                 {
-                    Console.WriteLine("Gano el jugador 2");
-                }
-                else
+                    return FirstPlayer.Mark;
+                } else
                 {
-                    Console.WriteLine("Gano el jugador 1");
+                    return SecondPlayer.Mark;
                 }
-            }
-            else {
-                
-                Console.WriteLine("Hubo empate");
-
             }
         }
 

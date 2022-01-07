@@ -45,6 +45,21 @@ namespace View.ViewModels
             return (game.IsFull() || game.HasWinner());
         }
      
+        public String GetMarkCurrentPlayer()
+        {
+            if (game.GetNextPlayer().Mark == MarkType.Cross)
+            {
+                return "X";
+            } else
+            {
+                return "O";
+            }
+        }
+
+        public MarkType CheckWinner()
+        {
+            return game.ObtenerResultado();
+        }
 
     }
 }
