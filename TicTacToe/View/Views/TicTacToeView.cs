@@ -8,6 +8,7 @@ using System.Windows;
 using System.Windows.Controls;
 using View.ViewModels;
 using TicTacToe.Models;
+using System.Windows.Media;
 
 namespace GUI.Views
 {
@@ -43,6 +44,8 @@ namespace GUI.Views
 
             _vm.PutMark(x, y);
             button.Content = _vm.GetMarkCurrentPlayer();
+            
+
             button.IsEnabled = false;
 
             if (_vm.GameEnded())
