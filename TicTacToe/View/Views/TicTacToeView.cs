@@ -15,12 +15,17 @@ namespace GUI.Views
     public partial class TicTacToeView : Window
     {
         private TicTacToeViewModel _vm;
+        private List<Button> buttons = new List<Button>();
+
+
 
         public TicTacToeView()
         {
             InitializeComponent();
             this._vm = new TicTacToeViewModel();
             DataContext = this._vm;
+            
+
 
         }
         public void NewGameButton_Click(object sender, RoutedEventArgs e)
@@ -34,6 +39,9 @@ namespace GUI.Views
         {
             //GameButton button = sender as GameButton;
             Button button = sender as Button;
+            this.buttons.Add(button);
+
+
             var coords = button.Tag.ToString();
             char[] charArr = coords.ToCharArray();
 
@@ -46,8 +54,7 @@ namespace GUI.Views
 
             _vm.PutMark(x, y);
 
-            button.Content = _vm.GetMarkCurrentPlayer();
-            
+            button.Content = _vm.GetMarkCurrentPlayer();            
             button.IsEnabled = false;
 
             if (_vm.GameEnded())
@@ -71,8 +78,15 @@ namespace GUI.Views
             }
         public void ResetButton_Click(object sender, RoutedEventArgs e)
         {
-            this._vm.ResetButton();
-            
+            foreach(var button in buttons)
+            {
+                button.Content = "";
+                button.IsEnabled = true;
+            }
+
+            this._vm.ResetGame();
+
+
         }
 
     }
