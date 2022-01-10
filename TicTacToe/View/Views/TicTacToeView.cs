@@ -25,8 +25,10 @@ namespace GUI.Views
         }
         public void NewGameButton_Click(object sender, RoutedEventArgs e)
         {
+            //habilitar los botones
             this._vm.StartGame();
         }
+
 
         public void MarkButton_Click(object sender, RoutedEventArgs e)
         {
@@ -43,9 +45,9 @@ namespace GUI.Views
 
 
             _vm.PutMark(x, y);
+
             button.Content = _vm.GetMarkCurrentPlayer();
             
-
             button.IsEnabled = false;
 
             if (_vm.GameEnded())
@@ -55,13 +57,16 @@ namespace GUI.Views
                 if (markWinner == MarkType.Empty)
                 {
                     Winner.Content = "Hubo empate";
+                    _vm.StartGame();
                 } else if (markWinner == MarkType.Cross)
                 {
                     Winner.Content = "Ganó X";
+                    _vm.StartGame();
                 } else
                     {
                     Winner.Content = "Ganó O";
-                    }
+                    _vm.StartGame();
+                }
                 }                
             }
         }

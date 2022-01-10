@@ -10,6 +10,7 @@
                 <Setter Property="FontStyle" Value="Italic"></Setter>
                 <Setter Property="Background" Value="#76D7C4"></Setter>
                 <Setter Property="FontFamily" Value="Trebuchet MS"></Setter>
+                <Setter Property="IsEnabled" Value="True"></Setter>
             </Style>
 
             <Style TargetType="Label" x:Key="WinnerLabel">

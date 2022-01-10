@@ -65,7 +65,7 @@
 
         </Grid>
 
-        <Button x:Name="StartNewGame" Content=" New Game! " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,610,0,0" Click="NewGameButton_Click" Style="{StaticResource StartButton}"/>
+        <Button x:Name="StartNewGame" Content=" Jugar! " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,610,0,0" Click="NewGameButton_Click" Style="{StaticResource StartButton}"/>
 
     </Grid>
 
