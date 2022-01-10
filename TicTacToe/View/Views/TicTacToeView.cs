@@ -87,6 +87,11 @@ namespace GUI.Views
 
         }
 
+        public void ExitGame_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
     }
 }
 
