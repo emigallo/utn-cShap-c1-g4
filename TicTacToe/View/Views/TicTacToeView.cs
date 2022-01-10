@@ -24,9 +24,6 @@ namespace GUI.Views
             InitializeComponent();
             this._vm = new TicTacToeViewModel();
             DataContext = this._vm;
-            
-
-
         }
         public void NewGameButton_Click(object sender, RoutedEventArgs e)
         {
@@ -83,6 +80,7 @@ namespace GUI.Views
                 button.Content = "";
                 button.IsEnabled = true;
             }
+            Winner.Content = "";
 
             this._vm.ResetGame();
 

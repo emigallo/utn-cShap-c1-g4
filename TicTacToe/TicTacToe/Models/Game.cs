@@ -15,9 +15,6 @@ namespace TicTacToe.Models
         private Player FirstPlayer;
         private Player SecondPlayer;
 
-        //private Player _player1 =new Player();
-        //private Player _player2 =new Player();
-
         private Boolean TurnFirstPlayer = true;
 
         public Game ()
@@ -28,30 +25,10 @@ namespace TicTacToe.Models
         public void Start()
         {   
             FillMatrix();
+            TurnFirstPlayer = true;
         }
 
-        public void Play()
-        {
-            while (!Board.IsFull() && !Board.HasWinner())
-            {
-                if (TurnFirstPlayer)
-                {
-                    Console.WriteLine("Turno Jugador 1");
-                    SetMarkPosition(FirstPlayer.Play(), FirstPlayer);
-                    
-                } else
-                {
-                    Console.WriteLine("Turno Jugador 2");
-                    SetMarkPosition(SecondPlayer.Play(), SecondPlayer);
-                }
-            }
-        }
-
-
-
-
-
-        public MarkType ObtenerResultado()
+               public MarkType ObtenerResultado()
         {
             if (!Board.HasWinner())
             {
@@ -131,8 +108,6 @@ namespace TicTacToe.Models
                 }
                 else
                 {
-                    /*Console.WriteLine("Error! Esa celda ya está ocupada."); //tirar pop up
-                    markPos = player.Play();*/
                     throw new Exception("Ya estaba ocupada");
                
                 }
@@ -150,7 +125,6 @@ namespace TicTacToe.Models
                 return SecondPlayer;
             }
         }
-
 
         public Boolean IsFull ()
         {

@@ -24,14 +24,6 @@ namespace TicTacToe.Models
                 ((2,0),(1,1),(0,2)), //Ganador diagonal 2
          };
 
-
-
-
-        public MarkType[,] GetMarks()
-        {
-            return this.Marks;
-        }
-
         public void SetMarkEmpty (int x, int y)
         {
             this.Marks[x, y] = MarkType.Empty;

@@ -40,21 +40,6 @@ namespace View.ViewModels
             game.SetMarkPosition(mp, game.GetNextPlayer());
         }
 
-        public void Play ()
-        {
-            while (!game.IsFull() && !game.HasWinner())
-            {
-                Player CurrentPlayer = game.GetNextPlayer();
-                int x = 0;
-                int y = 0;
-
-                game.SetMarkPosition(new MarkPosition(x, y), CurrentPlayer);
-
-            }
-
-            //return game.GetWinner() || imprimir el game.GetWinner()
-        }
-
         public Boolean GameEnded()
         {
             return (game.IsFull() || game.HasWinner());
@@ -109,16 +94,6 @@ namespace View.ViewModels
             game.SetPlayers(FirstPlayer, SecondPlayer);
             this.Buttons = true;
             this._buttons = true;
-        }
-        public void ChangeContent(string mark)
-        {
-            this.Content = mark;
-            this._content = mark;
-        }
-
-        public void ResetButton ()
-        {
-            this.Buttons = true;
         }
     }
 }

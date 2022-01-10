@@ -41,7 +41,7 @@
         <Button Grid.Row="4" Grid.Column="2" x:Name="ResetGame" Content=" Reiniciar " HorizontalAlignment="Center" VerticalAlignment="Center" Click="ResetButton_Click" Style="{StaticResource ResetButton}"/>
 
         <!--Winner Label-->
-        <Label Background="White" Grid.Row="4" Grid.ColumnSpan="3" Grid.RowSpan="2" Name="Winner" Style="{StaticResource WinnerLabel}" RenderTransformOrigin="0.5,0.5">
+        <Label Background="White" Grid.Row="4" Grid.ColumnSpan="3" Grid.RowSpan="2" x:Name="Winner" Style="{StaticResource WinnerLabel}" RenderTransformOrigin="0.5,0.5">
         </Label>
 
     </Grid>
