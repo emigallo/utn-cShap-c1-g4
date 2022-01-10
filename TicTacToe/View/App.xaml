@@ -9,7 +9,6 @@
             <Style TargetType="Button" x:Key="Test">
                 <Setter Property="FontSize" Value="30"></Setter>
                 <Setter Property="FontFamily" Value="Trebuchet MS"></Setter>
-                <Setter Property="IsEnabled" Value="True"></Setter>
             </Style>
 
             <!--BOTÓN MARCAS-->

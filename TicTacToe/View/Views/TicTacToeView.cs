@@ -57,21 +57,26 @@ namespace GUI.Views
                 if (markWinner == MarkType.Empty)
                 {
                     Winner.Content = "Hubo empate";
-                    _vm.StartGame();
+                    _vm.EndGame();
                 } else if (markWinner == MarkType.Cross)
                 {
                     Winner.Content = "Ganó X";
-                    _vm.StartGame();
+                    _vm.EndGame();
                 } else
                     {
                     Winner.Content = "Ganó O";
-                    _vm.StartGame();
+                    _vm.EndGame();
                 }
                 }                
             }
+        public void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+            this._vm.ResetButton();
+            
         }
 
     }
+}
 
    
 

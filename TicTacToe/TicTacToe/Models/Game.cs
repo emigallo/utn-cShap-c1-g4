@@ -26,13 +26,8 @@ namespace TicTacToe.Models
         }
 
         public void Start()
-        {
-            
+        {   
             FillMatrix();
-            //SetPlayers();
-            //Play();
-            //ObtenerResultado(Board.IsFull(), Board.HasWinner(), TurnFirstPlayer);
-
         }
 
         public void Play()
