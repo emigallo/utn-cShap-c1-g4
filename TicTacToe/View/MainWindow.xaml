@@ -6,70 +6,40 @@
         mc:Ignorable="d"
         Title="Tic Tac Toe"
         Height="800"
-        Width="800">
+        Width="800"
+        >
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
 
-    <Grid>
-        <Grid Background="White">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
+        <!--Marks Button-->
+        <Button Grid.Column="0" Tag="0,0" Click="MarkButton_Click" Style="{StaticResource MarkButton}"></Button>
+        <Button Grid.Column="1" Tag="0,1" Click="MarkButton_Click" Style="{StaticResource MarkButton}"></Button>
+        <Button Grid.Column="2" Tag="0,2" Click="MarkButton_Click" Style="{StaticResource MarkButton}"></Button>
+        <Button Grid.Column="0" Grid.Row="1" Tag="1,0" Click="MarkButton_Click" Style="{StaticResource MarkButton}"></Button>
+        <Button Grid.Column="1" Grid.Row="1" Tag="1,1" Click="MarkButton_Click" Style="{StaticResource MarkButton}"></Button>
+        <Button Grid.Column="2" Grid.Row="1" Tag="1,2" Click="MarkButton_Click" Style="{StaticResource MarkButton}"></Button>
+        <Button Grid.Column="0" Grid.Row="2" Tag="2,0" Click="MarkButton_Click" Style="{StaticResource MarkButton}"></Button>
+        <Button Grid.Column="1" Grid.Row="2" Tag="2,1" Click="MarkButton_Click" Style="{StaticResource MarkButton}"></Button>
+        <Button Grid.Column="2" Grid.Row="2" Tag="2,2" Click="MarkButton_Click" Style="{StaticResource MarkButton}"></Button>
 
-            <!--
-            <local:GameButton X="0" Y="0" Grid.Column="0"></local:GameButton>
+        <!--Buttons Start/Reset-->
+        <Button Grid.Row="4" Grid.Column="0" x:Name="StartNewGame" Content=" Jugar! " HorizontalAlignment="Center" VerticalAlignment="Center" Click="NewGameButton_Click" Style="{StaticResource StartButton}"/>
+        <Button Grid.Row="4" Grid.Column="2" x:Name="ResetGame" Content=" Reiniciar " HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource ResetButton}"/>
 
-            <local:GameButton X="0" Y="1" Grid.Column="1"></local:GameButton>
-
-            <local:GameButton X="0" Y="2" Grid.Column="2"></local:GameButton>
-
-            <local:GameButton X="1" Y="0" Grid.Column="0" Grid.Row="1"></local:GameButton>
-
-            <local:GameButton X="1" Y="1" Grid.Column="1" Grid.Row="1"></local:GameButton>
-
-            <local:GameButton X="1" Y="2" Grid.Column="2" Grid.Row="1"></local:GameButton>
-
-            <local:GameButton X="2" Y="0" Grid.Column="0" Grid.Row="2"></local:GameButton>
-
-            <local:GameButton X="2" Y="1" Grid.Column="1" Grid.Row="2"></local:GameButton>
-
-            <local:GameButton X="2" Y="2" Grid.Column="2" Grid.Row="2"></local:GameButton>
-            -->
-
-
-
-            <Button Grid.Column="0" Content="0,0" Click="MarkButton_Click" Style="{StaticResource StandardButton}"></Button>
-            <Button Grid.Column="1" Content="0,1" Click="MarkButton_Click" Style="{StaticResource StandardButton}"></Button>
-            <Button Grid.Column="2" Content="0,2" Click="MarkButton_Click" Style="{StaticResource StandardButton}"></Button>
-            <Button Grid.Column="0" Grid.Row="1" Content="1,0" Click="MarkButton_Click" Style="{StaticResource StandardButton}"></Button>
-            <Button Grid.Column="1" Grid.Row="1" Content="1,1" Click="MarkButton_Click" Style="{StaticResource StandardButton}"></Button>
-            <Button Grid.Column="2" Grid.Row="1" Content="1,2" Click="MarkButton_Click" Style="{StaticResource StandardButton}"></Button>
-            <Button Grid.Column="0" Grid.Row="2" Content="2,0" Click="MarkButton_Click" Style="{StaticResource StandardButton}"></Button>
-            <Button Grid.Column="1" Grid.Row="2" Content="2,1" Click="MarkButton_Click" Style="{StaticResource StandardButton}"></Button>
-            <Button Grid.Column="2" Grid.Row="2" Content="2,2" Click="MarkButton_Click" Style="{StaticResource StandardButton}"></Button>
-
-
-
-
-
-
-            <Label Background="White" Grid.Row="2" Grid.ColumnSpan="3" Margin="0,196,0,0" Grid.RowSpan="2" Name="Winner" Style="{StaticResource WinnerLabel}" RenderTransformOrigin="0.5,0.5">
-            </Label>
-
-        </Grid>
-
-        <Button x:Name="StartNewGame" Content=" Jugar! " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,610,0,0" Click="NewGameButton_Click" Style="{StaticResource StartButton}"/>
+        <!--Winner Label-->
+        <Label Background="White" Grid.Row="4" Grid.ColumnSpan="3" Grid.RowSpan="2" Name="Winner" Style="{StaticResource WinnerLabel}" RenderTransformOrigin="0.5,0.5">
+        </Label>
 
     </Grid>
-
-
-    <!--Click="btnNewGame_Click"-->
-
 </Window>

@@ -5,30 +5,38 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
-            <Style TargetType="Button" x:Key="StandardButton">
+            <!--BOTÓN BÁSICO-->
+            <Style TargetType="Button" x:Key="Test">
                 <Setter Property="FontSize" Value="30"></Setter>
-                <Setter Property="FontStyle" Value="Italic"></Setter>
-                <Setter Property="Background" Value="#76D7C4"></Setter>
                 <Setter Property="FontFamily" Value="Trebuchet MS"></Setter>
                 <Setter Property="IsEnabled" Value="True"></Setter>
             </Style>
 
+            <!--BOTÓN MARCAS-->
+            <Style TargetType="Button" x:Key="MarkButton" BasedOn="{StaticResource Test}">
+                <Setter Property="Background" Value="#76D7C4"></Setter>
+                <Setter Property="FontStyle" Value="Italic"></Setter>
+            </Style>
+
+            <!--BOTÓN START-->
+            <Style TargetType="Button" x:Key="StartButton" BasedOn="{StaticResource Test}">
+                <Setter Property="Background" Value="#E74C3C"></Setter>
+            </Style>
+
+            <!--BOTÓN RESETEAR-->
+            <Style TargetType="Button" x:Key="ResetButton" BasedOn="{StaticResource Test}">
+                <Setter Property="Background" Value="Green"></Setter>
+            </Style>
+
+            <!--WINNER LABEL-->
             <Style TargetType="Label" x:Key="WinnerLabel">
                 <Setter Property="HorizontalAlignment" Value="Center"></Setter>
                 <Setter Property="VerticalAlignment" Value="Center"></Setter>
                 <Setter Property="FontSize" Value="40"></Setter>
                 <Setter Property="FontStyle" Value="Normal"></Setter>
                 <Setter Property="FontFamily" Value="Trebuchet MS"></Setter>
-                
             </Style>
 
-            <Style TargetType="Button" x:Key="StartButton">
-                <Setter Property="Background" Value="#E74C3C"></Setter>
-                <Setter Property="FontSize" Value="30"></Setter>
-                <Setter Property="FontFamily" Value="Trebuchet MS"></Setter>
-             </Style>
-                
         </ResourceDictionary>
-         
     </Application.Resources>
 </Application>

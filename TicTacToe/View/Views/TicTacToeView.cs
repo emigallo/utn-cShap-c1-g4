@@ -34,7 +34,7 @@ namespace GUI.Views
         {
             //GameButton button = sender as GameButton;
             Button button = sender as Button;
-            var coords = button.Content.ToString();
+            var coords = button.Tag.ToString();
             char[] charArr = coords.ToCharArray();
 
             char coordX = charArr[0];
