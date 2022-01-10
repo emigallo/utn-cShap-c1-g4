@@ -29,30 +29,23 @@ namespace GUI.Views
         {
             //habilitar los botones
             this._vm.StartGame();
+            Button button = (Button)sender;
+            button.IsEnabled = false;
         }
 
 
         public void MarkButton_Click(object sender, RoutedEventArgs e)
         {
-            //GameButton button = sender as GameButton;
             Button button = sender as Button;
             this.buttons.Add(button);
 
+            var coords = GetCoordinates(button.Tag.ToString().ToCharArray());
 
-            var coords = button.Tag.ToString();
-            char[] charArr = coords.ToCharArray();
-
-            char coordX = charArr[0];
-            char coordY = charArr[2];
-
-            int x = coordX - '0';
-            int y = coordY - '0';
-
-
-            _vm.PutMark(x, y);
-
-            button.Content = _vm.GetMarkCurrentPlayer();            
+            _vm.PutMark(coords[0], coords[1]);
+            
             button.IsEnabled = false;
+            button.Content = _vm.GetMarkCurrentPlayer();
+            button.Foreground = GetColorByMark(button.Content.ToString());
 
             if (_vm.GameEnded())
             {
@@ -90,6 +83,38 @@ namespace GUI.Views
         public void ExitGame_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        public Brush GetColorByMark(string mark)
+        {
+
+            var converter = new BrushConverter();
+            var brushViolet = (Brush)converter.ConvertFromString("#8E44AD");
+            var brushYellow = (Brush)converter.ConvertFromString("#E67E22");
+
+            if (mark == "X")
+            {
+                return brushViolet;
+            } else
+            {
+                return brushYellow;
+            }
+        }
+
+        private int[] GetCoordinates (char[] charArr)
+        {
+            char coordX = charArr[0];
+            char coordY = charArr[2];
+
+            int x = coordX - '0';
+            int y = coordY - '0';
+
+            int[] coords = new int[2];
+            coords[0] = x;
+            coords[1] = y;
+
+            return coords;
+
         }
 
     }

@@ -19,12 +19,12 @@
 
             <!--BOTÓN START-->
             <Style TargetType="Button" x:Key="StartButton" BasedOn="{StaticResource Test}">
-                <Setter Property="Background" Value="#E74C3C"></Setter>
+                <Setter Property="Background" Value="#52BE80"></Setter>
             </Style>
 
             <!--BOTÓN RESETEAR-->
             <Style TargetType="Button" x:Key="ResetButton" BasedOn="{StaticResource Test}">
-                <Setter Property="Background" Value="Green"></Setter>
+                <Setter Property="Background" Value="#F1C40F"></Setter>
             </Style>
 
             <!--WINNER LABEL-->
