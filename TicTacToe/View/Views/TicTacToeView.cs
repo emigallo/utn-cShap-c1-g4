@@ -54,14 +54,17 @@ namespace GUI.Views
                 if (markWinner == MarkType.Empty)
                 {
                     Winner.Content = "Hubo empate";
+                    TurnOffButtons();
                     _vm.EndGame();
                 } else if (markWinner == MarkType.Cross)
                 {
                     Winner.Content = "Ganó X";
+                    TurnOffButtons();
                     _vm.EndGame();
                 } else
                     {
                     Winner.Content = "Ganó O";
+                    TurnOffButtons();
                     _vm.EndGame();
                 }
                 }                
@@ -115,6 +118,14 @@ namespace GUI.Views
 
             return coords;
 
+        }
+
+        private void TurnOffButtons()
+        {
+            foreach(Button button in buttons)
+            {
+                button.IsEnabled = false;
+            }
         }
 
     }
