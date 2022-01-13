@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800"
+        Title="Ingreso a la Sala" Height="450" Width="800"
         >
 
     <Grid Background="#D5F5E3">
@@ -23,27 +23,27 @@
         </Grid.ColumnDefinitions>
 
         <!--FILA1-->
-        <Label Grid.Column="1" Grid.Row="0" Content="TaTeTi" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+        <Label Grid.Column="1" Grid.Row="0" Content="TaTeTi" FontSize ="50" FontFamily="Trebuchet MS" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
         
         <!--FILA2-->
         <StackPanel Grid.Row="1" Grid.Column="1">
-        <Label Content="Ingrese" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+            <Label Content="Jugador 1" FontFamily="Trebuchet MS" FontSize ="30" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
             <TextBox TextChanged="TextBoxPlayerOne"/>
         </StackPanel>
         
         <!--FILA3-->
         <StackPanel Grid.Row="2" Grid.Column="1">
-            <Label Content="Ingrese" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+            <Label Content="Jugador 2" FontFamily="Trebuchet MS" FontSize ="30" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
             <TextBox TextChanged="TextBoxPlayerTwo"/>
         </StackPanel>
         
         <!--FILA4-->
         <StackPanel Grid.Column="0" Grid.Row="3">
-            <Button Content="Iniciar" Click="InitiateButton_Click"/>
+            <Button Content="Iniciar" Click="InitiateButton_Click" Style="{StaticResource StartButton}" Width="200"/>
         </StackPanel>
 
         <StackPanel Grid.Column="2" Grid.Row="3">
-            <Button Content="Cancelar" Grid.Column="2" Grid.Row="3"></Button>
+            <Button Background="#E74C3C" Content="Cancelar" Grid.Column="2" Grid.Row="3" Click="ExitGame_Click" Style="{StaticResource StartButton}" Width="200"></Button>
         </StackPanel>
 
 

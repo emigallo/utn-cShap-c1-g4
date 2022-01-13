@@ -51,5 +51,10 @@ namespace GUI
             return names;
         }
 
+        public void ExitGame_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
     }
 }
