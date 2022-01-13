@@ -9,6 +9,7 @@ namespace TicTacToe.Models
     public class Player
     {
         public MarkType Mark { get; private set; }
+        public string Name { get; set; }
 
 
         public  void SetMark(MarkType mark)

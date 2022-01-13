@@ -13,7 +13,7 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition MinHeight="100"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -38,8 +38,11 @@
 
         <!--Buttons Start/Reset-->
         <Button Grid.Row="4" Grid.Column="0" x:Name="StartNewGame" Content=" Jugar! " HorizontalAlignment="Center" VerticalAlignment="Center" Click="NewGameButton_Click" Style="{StaticResource StartButton}"/>
-        <Button Grid.Row="3" Grid.Column="2" x:Name="ResetGame" Content=" Reiniciar " HorizontalAlignment="Center"  VerticalAlignment="Top" Click="ResetButton_Click" Style="{StaticResource ResetButton}" Margin="0,45,0,0" />
-        <Button Background="#E74C3C" Grid.Row="3" Grid.Column="2" x:Name="ExitGame" Content=" Salir :( " HorizontalAlignment="Center" VerticalAlignment="Top" Click="ExitGame_Click" Style="{StaticResource StartButton}" Margin="0,95,0,0" />
+
+        <StackPanel Grid.Row="3" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical">
+        <Button x:Name="ResetGame" Content=" Reiniciar " Click="ResetButton_Click" Style="{StaticResource ResetButton}" Margin="5" />
+        <Button Background="#E74C3C" x:Name="ExitGame" Content=" Salir :( " Click="ExitGame_Click" Style="{StaticResource StartButton}" Margin="5" />
+        </StackPanel>
         <!--Winner Label-->
         <Label Background="#D5F5E3" Grid.Row="4" Grid.ColumnSpan="3" Grid.RowSpan="2" x:Name="Winner" Style="{StaticResource WinnerLabel}" RenderTransformOrigin="0.5,0.5">
         </Label>

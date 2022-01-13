@@ -75,12 +75,22 @@ namespace View.ViewModels
             }
         }
 
+        internal string GetNamePlayerOne()
+        {
+            return this.FirstPlayer.Name;
+        }
+
         private string _content;
         public string Content
         {
             get { return this._content; }
             set { this._content = value; 
             OnPropertyChanged(nameof(Content));} 
+        }
+
+        internal string GetNamePlayerTwo()
+        {
+            return this.SecondPlayer.Name;
         }
 
         public void EndGame()
@@ -95,5 +105,13 @@ namespace View.ViewModels
             this.Buttons = true;
             this._buttons = true;
         }
+        
+        public void SetNames(string[] names)
+        {
+            this.FirstPlayer.Name = names[0];
+            this.SecondPlayer.Name = names[1];
+        }
+
+
     }
 }

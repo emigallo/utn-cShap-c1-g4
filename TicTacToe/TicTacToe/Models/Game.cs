@@ -25,7 +25,7 @@ namespace TicTacToe.Models
         public void Start()
         {   
             FillMatrix();
-            TurnFirstPlayer = true;
+            TurnFirstPlayer = false;
         }
 
                public MarkType ObtenerResultado()

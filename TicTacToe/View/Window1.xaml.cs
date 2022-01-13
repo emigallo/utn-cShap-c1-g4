@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace GUI
 {
@@ -20,17 +9,46 @@ namespace GUI
     /// </summary>
     public partial class Window1 : Window
     {
+        private string namePlayerOne;
+        private string namePlayerTwo;
+        public Boolean formAccepted =false;
 
         public Window1()
         {
             InitializeComponent();
         }
 
-        private void TestButton_Click(object sender, RoutedEventArgs e)
+        private void InitiateButton_Click (Object sender, RoutedEventArgs e)
         {
-            MainWindow mw = new MainWindow();
-            Visibility = Visibility.Hidden;
-            mw.Show();
+            if (namePlayerOne != null && namePlayerTwo != null && namePlayerOne!=namePlayerTwo)
+            {
+                this.formAccepted = true;
+                this.Hide();
+            } else
+            {
+                MessageBox.Show("Ingrese los nombres correctamente");
+            }
+        }
+
+        private void TextBoxPlayerOne (object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            this.namePlayerOne = textBox.Text;
+        }
+
+        private void TextBoxPlayerTwo (object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            this.namePlayerTwo = textBox.Text;
+        }
+
+        public string[] GetNames ()
+        {
+            string[] names = new string[2];
+            names[0] = this.namePlayerOne;
+            names[1] = this.namePlayerTwo;
+
+            return names;
         }
 
     }

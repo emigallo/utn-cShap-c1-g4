@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800"
         >
+
     <Grid Background="#D5F5E3">
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -17,8 +18,39 @@
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
+        <!--FILA1-->
+        <Label Grid.Column="1" Grid.Row="0" Content="TaTeTi" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+        
+        <!--FILA2-->
+        <StackPanel Grid.Row="1" Grid.Column="1">
+        <Label Content="Ingrese" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+            <TextBox TextChanged="TextBoxPlayerOne"/>
+        </StackPanel>
+        
+        <!--FILA3-->
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <Label Content="Ingrese" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
+            <TextBox TextChanged="TextBoxPlayerTwo"/>
+        </StackPanel>
+        
+        <!--FILA4-->
+        <StackPanel Grid.Column="0" Grid.Row="3">
+            <Button Content="Iniciar" Click="InitiateButton_Click"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.Row="3">
+            <Button Content="Cancelar" Grid.Column="2" Grid.Row="3"></Button>
+        </StackPanel>
+
+
+
+        <!-- 
         <Button Grid.Column="0" Grid.Row="0" Content="TEST" Click="TestButton_Click"></Button>
-    </Grid>
+        -->
+        </Grid>
+    
 </Window>

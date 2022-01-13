@@ -27,10 +27,15 @@ namespace GUI.Views
         }
         public void NewGameButton_Click(object sender, RoutedEventArgs e)
         {
-            //habilitar los botones
-            this._vm.StartGame();
-            Button button = (Button)sender;
-            button.IsEnabled = false;
+            Window1 win = new Window1();
+            win.ShowDialog();
+            if (win.formAccepted) 
+            {
+              this._vm.SetNames(win.GetNames());
+              this._vm.StartGame();
+              Button button = (Button)sender;
+              button.IsEnabled = false;
+            }
         }
 
 
@@ -58,12 +63,12 @@ namespace GUI.Views
                     _vm.EndGame();
                 } else if (markWinner == MarkType.Cross)
                 {
-                    Winner.Content = "Ganó X";
+                    Winner.Content = "Ganó "+this._vm.GetNamePlayerOne();
                     TurnOffButtons();
                     _vm.EndGame();
                 } else
                     {
-                    Winner.Content = "Ganó O";
+                    Winner.Content = "Ganó "+this._vm.GetNamePlayerTwo();
                     TurnOffButtons();
                     _vm.EndGame();
                 }
