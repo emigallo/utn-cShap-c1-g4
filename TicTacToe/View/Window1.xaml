@@ -28,13 +28,13 @@
         <!--FILA2-->
         <StackPanel Grid.Row="1" Grid.Column="1">
             <Label Content="Jugador 1" FontFamily="Trebuchet MS" FontSize ="30" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
-            <TextBox TextChanged="TextBoxPlayerOne"/>
+            <TextBox  FontSize="20" FontFamily="Trebuchet MS" MinWidth="30" MinHeight="30" TextChanged="TextBoxPlayerOne"/>
         </StackPanel>
         
         <!--FILA3-->
         <StackPanel Grid.Row="2" Grid.Column="1">
             <Label Content="Jugador 2" FontFamily="Trebuchet MS" FontSize ="30" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
-            <TextBox TextChanged="TextBoxPlayerTwo"/>
+            <TextBox FontSize="20" FontFamily="Trebuchet MS" MinWidth="30" MinHeight="30" TextChanged="TextBoxPlayerTwo"/>
         </StackPanel>
         
         <!--FILA4-->
@@ -46,11 +46,7 @@
             <Button Background="#E74C3C" Content="Cancelar" Grid.Column="2" Grid.Row="3" Click="ExitGame_Click" Style="{StaticResource StartButton}" Width="200"></Button>
         </StackPanel>
 
-
-
-        <!-- 
-        <Button Grid.Column="0" Grid.Row="0" Content="TEST" Click="TestButton_Click"></Button>
-        -->
+        
         </Grid>
     
 </Window>
