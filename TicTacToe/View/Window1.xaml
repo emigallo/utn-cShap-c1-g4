@@ -27,14 +27,14 @@
         
         <!--FILA2-->
         <StackPanel Grid.Row="1" Grid.Column="1">
-            <Label Content="Jugador 1" FontFamily="Trebuchet MS" FontSize ="30" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
-            <TextBox  FontSize="20" FontFamily="Trebuchet MS" MinWidth="30" MinHeight="30" TextChanged="TextBoxPlayerOne"/>
+            <Label Content="Jugador 1" Style="{StaticResource LobbyLabel}"></Label>
+            <TextBox  FontSize="20" Style="{StaticResource TextBoxPlayer}" TextChanged="TextBoxPlayerOne"/>
         </StackPanel>
         
         <!--FILA3-->
         <StackPanel Grid.Row="2" Grid.Column="1">
-            <Label Content="Jugador 2" FontFamily="Trebuchet MS" FontSize ="30" VerticalAlignment="Center" HorizontalAlignment="Center"></Label>
-            <TextBox FontSize="20" FontFamily="Trebuchet MS" MinWidth="30" MinHeight="30" TextChanged="TextBoxPlayerTwo"/>
+            <Label Content="Jugador 2" Style="{StaticResource LobbyLabel}"></Label>
+            <TextBox FontSize="20" Style="{StaticResource TextBoxPlayer}" TextChanged="TextBoxPlayerTwo"/>
         </StackPanel>
         
         <!--FILA4-->

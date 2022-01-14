@@ -30,7 +30,7 @@ namespace View.ViewModels
         {
             game.Start();
             game.SetPlayers(FirstPlayer, SecondPlayer);
-            this.Buttons = true;
+            this.EnableButtons = true;
             this.Content = "";
         }
 
@@ -61,17 +61,17 @@ namespace View.ViewModels
             return game.ObtenerResultado();
         }
 
-        private Boolean _buttons;
-        public Boolean Buttons
+        private Boolean _enableButtons;
+        public Boolean EnableButtons
         {
             get
             {
-                return this._buttons;
+                return this._enableButtons;
             }
             set
             {
-                this._buttons = value;
-                OnPropertyChanged(nameof(Buttons));
+                this._enableButtons = value;
+                OnPropertyChanged(nameof(EnableButtons));
             }
         }
 
@@ -95,15 +95,15 @@ namespace View.ViewModels
 
         public void EndGame()
         {
-            this.Buttons = false;
+            this.EnableButtons = false;
         }
 
         public void ResetGame()
         {
             game.Start();
             game.SetPlayers(FirstPlayer, SecondPlayer);
-            this.Buttons = true;
-            this._buttons = true;
+            this.EnableButtons = true;
+            this._enableButtons = true;
         }
         
         public void SetNames(string[] names)

@@ -29,7 +29,7 @@ namespace GUI.Views
         {
             Window1 win = new Window1();
             win.ShowDialog();
-            if (win.formAccepted) 
+            if (win.FormAccepted) 
             {
               this._vm.SetNames(win.GetNames());
               this._vm.StartGame();

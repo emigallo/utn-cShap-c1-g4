@@ -11,22 +11,27 @@ namespace GUI
     {
         private string namePlayerOne;
         private string namePlayerTwo;
-        public Boolean formAccepted =false;
+        public Boolean FormAccepted { get; set; }
 
         public Window1()
         {
             InitializeComponent();
+            this.FormAccepted = false;
         }
 
         private void InitiateButton_Click (Object sender, RoutedEventArgs e)
         {
-            if (namePlayerOne != null && namePlayerTwo != null && namePlayerOne!=namePlayerTwo)
-            {
-                this.formAccepted = true;
-                this.Hide();
-            } else
+            if (namePlayerOne == null || namePlayerTwo == null)
             {
                 MessageBox.Show("Ingrese los nombres correctamente");
+            } else if(namePlayerOne == namePlayerTwo)
+            {
+                MessageBox.Show("Ingrese un nombre diferente");
+            }
+            else
+            {
+                this.FormAccepted = true;
+                this.Hide();
             }
         }
 
