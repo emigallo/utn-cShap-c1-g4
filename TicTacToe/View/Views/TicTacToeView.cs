@@ -15,7 +15,6 @@ namespace GUI.Views
     public partial class TicTacToeView : Window
     {
         private TicTacToeViewModel _vm;
-        private List<Button> buttons = new List<Button>();
 
 
 
@@ -42,14 +41,11 @@ namespace GUI.Views
         public void MarkButton_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
-            this.buttons.Add(button);
 
             var coords = GetCoordinates(button.Tag.ToString().ToCharArray());
 
             _vm.PutMark(coords[0], coords[1]);
-            
-            button.IsEnabled = false;
-            button.Content = _vm.GetMarkCurrentPlayer();
+            _vm.ChangeContent(button.Tag.ToString());
             button.Foreground = GetColorByMark(button.Content.ToString());
 
             if (_vm.GameEnded())
@@ -59,28 +55,21 @@ namespace GUI.Views
                 if (markWinner == MarkType.Empty)
                 {
                     Winner.Content = "Hubo empate";
-                    TurnOffButtons();
                     _vm.EndGame();
                 } else if (markWinner == MarkType.Cross)
                 {
                     Winner.Content = "Ganó "+this._vm.GetNamePlayerOne();
-                    TurnOffButtons();
                     _vm.EndGame();
                 } else
                     {
                     Winner.Content = "Ganó "+this._vm.GetNamePlayerTwo();
-                    TurnOffButtons();
                     _vm.EndGame();
                 }
                 }                
             }
         public void ResetButton_Click(object sender, RoutedEventArgs e)
         {
-            foreach(var button in buttons)
-            {
-                button.Content = "";
-                button.IsEnabled = true;
-            }
+            
             Winner.Content = "";
 
             this._vm.ResetGame();
@@ -125,13 +114,6 @@ namespace GUI.Views
 
         }
 
-        private void TurnOffButtons()
-        {
-            foreach(Button button in buttons)
-            {
-                button.IsEnabled = false;
-            }
-        }
 
     }
 }
